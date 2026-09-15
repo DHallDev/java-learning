@@ -1,5 +1,5 @@
 ## Statements
-A statment is a complete command/instruction to be executed. Consists of one ore more expressions.
+A statement is a complete command/instruction to be executed. Consists of one or more expressions.
 Statements tell _Java what to do_
 
 ## Rules & Mechanics:
@@ -30,7 +30,7 @@ int age;
 double price;  
 char grade
 
-### 2. Initialization Statments:
+### 2. Initialization Statements:
 Assign a value to a variable   
 age = 25;  
 price = 10.99;  
@@ -45,14 +45,16 @@ boolean isActive = true;
 These produce a value and end with a semicolon.   
 x = x + 1;  
 count++;  
-System.out.println("Hello World");
+System.out.println("Hello World");  
+
+For more information on what an expression is please see `notes/expressions.md`
 
 ### 5. Method Call Statements
-These Statments call a method to perform an action.  
+These Statements call a method to perform an action.  
 System.out.println("Java is fun");  
-$\uparrow$ is the main statment inside my HelloWorld program.
+$\uparrow$ is the main statement inside my HelloWorld program.
 
-## 6. Control Flow Statments:
+## 6. Control Flow Statements:
 These are used to change the flow from normal top-to-bottom to something else.  
 - # TBD
 
@@ -66,13 +68,13 @@ This is a complete instruction:
 
 ## Common Mistakes
 - Forgetting the `;` at the end of a statement
-- Using expressions without completeing them as statements
+- Using expressions without completing them as statements
 - Confusing Expressions with statements
-- Putting statments outside of methods
+- Putting statements outside of methods
 - Using assignment (`=`) instead of comparison (`==`) inside statements
 
 ## Summary:
-Statments are complete instructions that Java executes.  
+Statements are complete instructions that Java executes.  
 They form the backbone of every Java programs.  
 They can be found in:
 - declarations
