@@ -24,9 +24,9 @@ If-conditionals allow my program to:
 Without these handy tools, every program will be very static with predetermined uses only.
 
 ## Examples
-These are taken from my `Hello.java` file that helped reinforce if-conditional logic...
 
 ### Basic If-Statement
+Taken from my `examples/If-Conditions/Hello.java`.
 #### Structure
 if (condition) {  
 &emsp;// code inside block runs if condition is true  
@@ -36,6 +36,48 @@ if (condition) {
 boolean isAlien = false;  
 if (isAlien == false) {  
 &emsp;System.out.println("It is not an alien!");  
+}
+
+### If-Else Statement
+Taken from my `examples/If-Conditions/Main.java`.
+#### Structure
+if (condition) {  
+&emsp;// condition is true  
+} else {  
+&emsp;// condition is false  
+}
+
+#### Usage
+int score = 5000;  
+if (score < 5000) {  
+&emsp;System.out.println("Your score was less than 5,000");  
+} else {  
+&emsp;System.out.println("Got here.");  
+}
+
+### Else-If Chain
+Used when you have multiple possible outcomes.  
+Taken from my `examples/If-Conditions/MainChallenge.java`.
+
+#### Structure
+if (firstCondition) {  
+&emsp;// Code will run only if firstCondition is true;  
+} else if (secondCondition) {  
+&emsp;// Code will run only if firstCondition is true and secondCondition is false.  
+&emsp;// This will be for the same for each sequential else-if statement after this one. There is no limit.  
+} else {  
+&emsp;// Code will run only if all the other conditions above are false.  
+}  
+
+
+#### Usage
+int score = 800;  
+if (score < 5000 && score > 1000) {  
+&emsp;System.out.println("Your score was less than 5,000, but greater than 1,000.");  
+} else if (score < 1000) {  
+&emsp;System.out.println("Your score was less than 1,000.");  
+} else {  
+&emsp;System.out.println("Got here.");  
 }
 
 ### Logical Operators in Conditions
@@ -88,6 +130,7 @@ They include:
 
 ## Side-Notes
 - Conditions must equate to `true` or `false`
+-  To check for additional conditions, include `else if`
 - `else` has no condition - it runs if every other condition was false
 - Complex conditions can be simplified using boolean variables
 - When dealing boolean variable conditions either pass it directly or use the `!` operators:

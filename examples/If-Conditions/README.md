@@ -5,6 +5,16 @@
 - Running code conditionally
 - Skipping code when conditions are false
 
+### If-Else Statements
+- Evaluating boolean expressions
+- Running code conditionally
+- Running code in `else` if `if` condition is false
+
+### Else-If Chains
+- Evaluating boolean expressions
+- Running code conditionally
+- Checking multiple conditions and running the code for the condition that returns true
+
 ### Logical Operators
 - `&&` (AND)
 - `||` (OR)
@@ -19,9 +29,15 @@
 ### File Included
 #### Hello.java
 Contains all examples from this lesson:
-- Basic if-statments
+- Basic if-statements
 - Logical operator usage
 - Ternary operators
+
+#### MainChallenge.java
+Contains:
+- If-Else Statements
+- Else-If Chains
+- Challenge to reinforce structure of If-Else statements
 
 ## Related Notes
 - If-Conditionals: `notes/if-conditionals.md`
