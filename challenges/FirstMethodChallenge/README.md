@@ -7,7 +7,7 @@ Create two methods to calculate and display a player's high score position.
 
 ### 1. displayHighScorePosition
 - Parameters: player's name, player's position
-- Prints: "<name> managed to get into position <position> on the high score lists."
+- Prints: "<name> managed to get into position <position> on the high score list."
 
 ### 2. calculateHighScorePosition
 - Parameter: player's score
