@@ -6,20 +6,35 @@ public class MainChallenge {
         int levelCompleted = 5;
         int bonus = 100;
 
-        // Practice If-Else Statement Chain
-//        if (score <= 5000) {
-//            System.out.println("You score was less than or equal to 5,000.");
-//        } else {
-//            System.out.println("Got here.");
-//        }
+        int finalScore = score;
 
-        // Practice Else-If Chain statements
-        if (score < 5000 && score > 1000) {
-            System.out.println("Your score was less than 5,000, but greater than 1,000.");
-        } else if (score < 1000) {
-            System.out.println("Your score was less than 1,000.");
-        } else {
-            System.out.println("Got here.");
+        if (gameOver) {
+            finalScore += (levelCompleted * bonus);
+            finalScore += 1000;
+            System.out.println("Your final score was " + finalScore + ".");
         }
+
+        score = 10000;
+        levelCompleted = 8;
+        bonus = 200;
+
+        finalScore = score;
+
+        if (gameOver) {
+            finalScore += (levelCompleted * bonus);
+            System.out.println("You final score was " + finalScore + ".");
+        }
+
+//         boolean newGameOver = true;
+//         int newScore = 10000;
+//         int newLevelCompleted = 8;
+//         int newBonus = 200;
+//
+//         int newFinalScore = newScore;
+//
+//         if (newGameOver) {
+//             newFinalScore += (newLevelCompleted * newBonus);
+//             System.out.println("Your final score was " + newFinalScore + ".");
+//         }
     }
 }

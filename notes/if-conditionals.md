@@ -57,7 +57,7 @@ if (score < 5000) {
 
 ### Else-If Chain
 Used when you have multiple possible outcomes.  
-Taken from my `examples/If-Conditions/MainChallenge.java`.
+Taken from my `examples/If-Conditions/Main.java`.
 
 #### Structure
 if (firstCondition) {  
