@@ -33,3 +33,30 @@ uses more memory for a simple check.
   - If using `else-if` chains, use a `return` statement to exit the method early, else it will fall-through.
 
 ---
+
+## Coding Excercise 2: Implementing A Speed Converter
+
+### Goal
+Create a method that calculates kilometers per hour to miles per hour rounded. Then print out that conversion
+
+### Requirements
+
+#### toMilesPerHour
+- 1 parameter: kilometersPerHour
+- `return` a value
+- If `kilometersPerHour` < 0: `return -1`
+- return the conversion of kilometers to miles:
+  - 1 mile per hour is 1.609 kilometers per hour
+- Needs to `return` the value as a long
+- Use `Math.round()`
+
+#### printConversion
+- 1 parameter: kilometersPerHour
+- No `return`
+- Prints the message **XX km/h = YY mi/h**
+- **XX** is the `kilometersPerHour`
+- **YY** is the `milesPerHour`
+- If `kilometersPerHour` < 0 print `Invalid Value`
+
+### Solution File
+`SpeedConverter.java`
