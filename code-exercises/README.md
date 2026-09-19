@@ -34,7 +34,7 @@ uses more memory for a simple check.
 
 ---
 
-## Coding Excercise 2: Implementing A Speed Converter
+## Coding Exercise 2: Implementing A Speed Converter
 
 ### Goal
 Create a method that calculates kilometers per hour to miles per hour rounded. Then print out that conversion
@@ -60,3 +60,13 @@ Create a method that calculates kilometers per hour to miles per hour rounded. T
 
 ### Solution File
 `SpeedConverter.java`
+
+### Observations
+- Before doing any calculations in `printConversion` we should check if `kilometersPerHour` is valid
+- Since we are returning calculations in `toMilesPerHour` we could use a ternary operator to handle the
+invalid case cleanly
+- `Math.round` `returns` a long value, this means no casting needed.
+- Since we call `toMilesPerHour` inside `printConversion` we have clearer calls inside `main`
+- It should be ok to use `toMilesPerHour` directly inside the `println` since it's obvious what the method
+does
+  - Vice Versa: I should use variables for my test cases to make it clear what I'm testing.
