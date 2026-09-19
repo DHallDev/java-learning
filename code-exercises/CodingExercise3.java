@@ -1,3 +1,6 @@
+// Coding Exercise 3 Solution:
+// See README.md for full challenge description
+
 public class CodingExercise3 {
 
     public static void main(String[] args) {
@@ -18,3 +21,4 @@ public class CodingExercise3 {
         System.out.println(kiloBytes + " KB = " + megaBytes + " MB and " + remainingKiloBytes + " KB");
     }
 }
+
