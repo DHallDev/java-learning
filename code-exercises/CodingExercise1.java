@@ -1,7 +1,7 @@
 // Coding Exercise 1 Solution:
 // See README.md for full challenge description
 
-public class PositiveNegativeZero {
+public class CodingExercise1 {
 
     public static void main(String[] args) {
         checkNumber(-5);

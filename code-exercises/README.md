@@ -22,7 +22,7 @@ Create a method to determine the polarity of a number or if the number is 0.
 - Print `zero` if number = 0
 
 ### Solution.File
-`PositiveNegativeZero.java`
+`CodingExercise1.java`
 
 ### Observations
 - Could use a nested ternary operators to cut out on the `else-if` chain.
@@ -59,7 +59,7 @@ Create a method that calculates kilometers per hour to miles per hour rounded. T
 - If `kilometersPerHour` < 0 print `Invalid Value`
 
 ### Solution File
-`SpeedConverter.java`
+`CodingExercise2.java`
 
 ### Observations
 - Before doing any calculations in `printConversion` we should check if `kilometersPerHour` is valid
@@ -70,3 +70,33 @@ invalid case cleanly
 - It should be ok to use `toMilesPerHour` directly inside the `println` since it's obvious what the method
 does
   - Vice Versa: I should use variables for my test cases to make it clear what I'm testing.
+
+---
+
+## Coding Exercise 3: Accurate Megabytes Converter
+
+### Goal
+Write a method that takes in kilobytes and calculates the total megabytes and remaining kilobytes, 
+and then prints out a message
+
+### Requirements
+
+#### printMegaBytesAndKiloBytes
+- 1 parameter: int kiloBytes
+- No `return`
+- Validation check: if kiloBytes < 0 print "Invalid Value"
+- Calculates total megabytes and remaining kilobytes
+- Prints message: "**XX** KB = **YY** MB and **ZZ** KB"
+- XX = the original value of kilobytes
+- YY = the calculated megabytes
+- ZZ = the remaining kilobytes
+- 1 MB = 1024KB
+
+### Solution
+`CodingExercise3.java`
+
+### Observations
+- Can pass the calculations straight into the `println`, but it leaves it unclear what the calculation
+represents
+
+--- 
