@@ -124,3 +124,5 @@ Write a method that determines if I should wake up. We should wake up if the dog
 or `hourOfDay == 23`
 - Program will automatically `return false` if the dog is not barking
 - If `hourOfDay > 23` it will also `return false` since we are checking `hourOfDay == 23`
+- Could include validation check directly to the the `return` statement, causing it to be one line.
+  - Decide against it due to it being harder to read.
