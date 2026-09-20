@@ -121,8 +121,36 @@ Write a method that determines if I should wake up. We should wake up if the dog
 ### Observations
 - For the validation check we only have to check if `hourOfDay < 0`
 - Since according to a 24-hour clock it goes from 0-23, we actually just need to check in `hourOfDay < 8`
-or `hourOfDay == 23`
+  or `hourOfDay == 23`
 - Program will automatically `return false` if the dog is not barking
 - If `hourOfDay > 23` it will also `return false` since we are checking `hourOfDay == 23`
 - Could include validation check directly to the the `return` statement, causing it to be one line.
   - Decide against it due to it being harder to read.
+
+--- 
+
+## Coding Exercise 5: Implementing A Precise Leap Year Calculator
+
+### Goal
+Write a method that determines whether a year is a leap year
+
+### Requirements
+
+#### isLeapYear
+- 1 parameter: int year
+- `return` a boolean
+- Validation check: year < 1 or year > 9999 `return false`
+
+
+### Solution
+`CodingExercise5.java`
+
+### Notes
+To determine if a year is a leap year:
+1. If the year is evenly divisible by 4, go to step 2. Otherwise, go to step 5.
+2. If the year is evenly divisible by 100, go to step 3. Otherwise, go to step 4.
+3. If the year is evenly divisible by 400, go to step 4. Otherwise, go to step 5.
+4. The year is a leap year (it has 366 days). The method isLeapYear needs to return true.
+5. The year is not a leap year (it has 365 days). The method isLeapYear needs to return false.
+
+### Observations
