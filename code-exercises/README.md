@@ -100,3 +100,27 @@ and then prints out a message
 represents
 
 --- 
+
+## Coding Exercise 4: Developing A 'Barking Dog' Program
+
+### Goal
+Write a method that determines if I should wake up. We should wake up if the dog is barking before 8 or after
+22.
+
+### Requirements
+
+#### shouldWakeUp
+- 2 parameter: boolean barking, int hourOfDay
+- `return` a boolean
+- Validation check: if hourOfDay < 0 or hourOfDay > 23 `return` false
+
+
+### Solution
+`CodingExercise4.java`
+
+### Observations
+- For the validation check we only have to check if `hourOfDay < 0`
+- Since according to a 24-hour clock it goes from 0-23, we actually just need to check in `hourOfDay < 8`
+or `hourOfDay == 23`
+- Program will automatically `return false` if the dog is not barking
+- If `hourOfDay > 23` it will also `return false` since we are checking `hourOfDay == 23`
