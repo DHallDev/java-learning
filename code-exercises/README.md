@@ -26,7 +26,7 @@ Create a method to determine the polarity of a number or if the number is 0.
 
 ### Observations
 - Could use a nested ternary operators to cut out on the `else-if` chain.
-  - Concise, not readable. Do not recommend
+  - Concise, not readable. Do not recommend.
   - Could use variables for the polarities to help with readability, but still it looks cluttered and
 uses more memory for a simple check.
 - Don't need to use `else` since it can only be one other number if it's not positive/negative.
@@ -62,13 +62,13 @@ Create a method that calculates kilometers per hour to miles per hour rounded. T
 `CodingExercise2.java`
 
 ### Observations
-- Before doing any calculations in `printConversion` we should check if `kilometersPerHour` is valid
+- Before doing any calculations in `printConversion` we should check if `kilometersPerHour` is valid.
 - Since we are returning calculations in `toMilesPerHour` we could use a ternary operator to handle the
-invalid case cleanly
+invalid case cleanly.
 - `Math.round` `returns` a long value, this means no casting needed.
-- Since we call `toMilesPerHour` inside `printConversion` we have clearer calls inside `main`
+- Since we call `toMilesPerHour` inside `printConversion` we have clearer calls inside `main`.
 - It should be ok to use `toMilesPerHour` directly inside the `println` since it's obvious what the method
-does
+does.
   - Vice Versa: I should use variables for my test cases to make it clear what I'm testing.
 
 ---
@@ -119,12 +119,12 @@ Write a method that determines if I should wake up. We should wake up if the dog
 `CodingExercise4.java`
 
 ### Observations
-- For the validation check we only have to check if `hourOfDay < 0`
+- For the validation check we only have to check if `hourOfDay < 0`.
 - Since according to a 24-hour clock it goes from 0-23, we actually just need to check in `hourOfDay < 8`
-  or `hourOfDay == 23`
-- Program will automatically `return false` if the dog is not barking
-- If `hourOfDay > 23` it will also `return false` since we are checking `hourOfDay == 23`
-- Could include validation check directly to the the `return` statement, causing it to be one line.
+  or `hourOfDay == 23`.
+- Program will automatically `return false` if the dog is not barking.
+- If `hourOfDay > 23` it will also `return false` since we are checking `hourOfDay == 23`.
+- Could include validation check directly to the `return` statement, causing it to be one line.
   - Decide against it due to it being harder to read.
 
 --- 
@@ -154,3 +154,12 @@ To determine if a year is a leap year:
 5. The year is not a leap year (it has 365 days). The method isLeapYear needs to return false.
 
 ### Observations
+- The basic solution requires multiple nested if statements.
+- I can cut down on number of if statements by combining checks such as `if (year % 4) && if (year % 100 == 0)`.
+  - I need to make adjustments due to a year being a leap year only if it's **not** divisible by 100.
+- After changing the original if statement, Intellij showed that we can simplify the `else if` chain 
+even further.
+  - After reviewing, I don't see the need for the `else` statement since `return year % 400 == 0` to
+end the method.
+  - I can simplify the entire `if` statement into a `return` statement. And unlike the above exercise, 
+we aren't mixing to validation checks and logic checks together, making it clearer to read.
