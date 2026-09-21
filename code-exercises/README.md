@@ -163,3 +163,21 @@ even further.
 end the method.
   - I can simplify the entire `if` statement into a `return` statement. And unlike the above exercise, 
 we aren't mixing to validation checks and logic checks together, making it clearer to read.
+
+---
+
+## Coding Exercise 6: Building A Decimal Comparator
+
+### Goal
+Write a method that returns true or false if two decimal numbers are the same up to three decimal places.
+
+### Requirements
+
+#### areEqualByThreeDecimalPlaces
+- Two parameters: double firstValue, double secondValue
+- `return` a boolean
+
+### Solution
+`CodingExercise6.java`
+
+### Observations
