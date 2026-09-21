@@ -181,3 +181,11 @@ Write a method that returns true or false if two decimal numbers are the same up
 `CodingExercise6.java`
 
 ### Observations
+- I need to check if both numbers are the same up to three decimal places.
+  - I can't just check firstValue == secondValue since that will compare the entire value.
+- To compare up to three decimal places, I can multiply each number by 1,000, and `cast` the result 
+to an `int`, which will truncate the remaining decimal.
+- The comparison can be done cleanly in a single `return` statement.
+
+---
+
