@@ -204,4 +204,35 @@ Write a method that returns true or false if the sum of the first two number equ
 `CodingExercise7.java`
 
 ### Observations
+- No observations: Rather clear just check if the value of `(firstValue + secondValue)` == `goal`.
+  - Can all be done in a single return statement.
 
+---
+
+## Coding Exercise 8: Devising A Teen Number Checker
+
+### Goal
+Create a method that checks if there is a teen (between 13-19 inclusively) out of three numbers. Create
+another method that checks if a single number is between 13-19 inclusively.
+
+### Requirements
+
+#### hasTeen
+- 3 parameters: int firstAge, int secondAge, int thirdAge
+- `return` a boolean
+
+#### isTeen
+- 1 parameters: int age
+- `return` a boolean
+
+### Solution
+`CodingExercise8.java`
+
+### Observations
+- For `isTeen` I can just pass the check as one `return` statement.
+- Instead of writing the same code that was inside `isTeen` inside `hasTeen` for each age we can just
+pass each age as an argument to `isTeen`
+- Noticed when I am solving exercises containing 2 methods, a lot of the time a method takes information
+from the other, allowing me to cut out a lot of duplicate code.
+  - After looking up, a method that helps break down a complex task, handle repetitive logic, or manage
+  a specific piece of a larger calculation is called a `helper method`.
