@@ -189,3 +189,19 @@ to an `int`, which will truncate the remaining decimal.
 
 ---
 
+## Coding Exercise 7: Creating An Equal Sum Checker
+
+### Goal
+Write a method that returns true or false if the sum of the first two number equal the third.
+
+### Requirements
+
+#### hasEqualSum
+- Three parameters: int firstValue, int secondValue, int goal
+- `return` a boolean
+
+### Solution
+`CodingExercise7.java`
+
+### Observations
+
