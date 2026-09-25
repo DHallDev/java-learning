@@ -24,3 +24,8 @@ Use the following scores:
 - 500
 - 100
 - 25
+
+## Notes:
+After doing the various coding exercises I learned about using a method to do calculations for another
+method, a `helper` method. After looking at this code snippet, I realized we can do the calculation 
+inside `displayHighScore` causing the work can to be more centralized and it reading better.
