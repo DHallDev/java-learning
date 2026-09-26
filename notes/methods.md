@@ -1,7 +1,7 @@
 ## Methods
 
 ###  Relevant file
-Please see` examples/methods/MainChallenge.java`  
+Please see `examples/methods/MainChallenge.java`  
 
 Methods are reusable blocks of code that performs a specific task. It can take inputs (called parameters),
 perform logic, and can return a value.
@@ -19,6 +19,9 @@ perform logic, and can return a value.
 - Methods only return one value
 - Parameters behave like local variables inside the method.
 - The **method signature** is the method name + parameter list.
+
+You can have multiple methods with the same name, though the must have different parameters. These are
+called `Overloaded Methods`.
 
 ## Why Is This Important
 Methods allow my program to:
@@ -59,6 +62,9 @@ To Invoke:
     `int highScore = calculateScore(gameOver, score, levelCompleted, bonus);
     System.out.println("The highScore is " + highScore);`
 
+### Overloaded Methods
+    
+
 ## Common Mistakes
 - Forgetting to return a value when the return type is not `void`.
 - Return the wrong data type
@@ -68,6 +74,8 @@ To Invoke:
 - Forgetting parameters are local to the method.
 - Assuming methods can return multiple values.
 - Forgetting that `static` methods cannot access non-static fields without an object.
+- Thinking a method's `return` type is part of the signature (overloaded methods).
+- Thinking a parameter name is part of the signature (overloaded method).
 
 ## Summary
 Methods are reusable blocks of code that performs a specific task.  
