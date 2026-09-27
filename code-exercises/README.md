@@ -236,3 +236,30 @@ pass each age as an argument to `isTeen`
 from the other, allowing me to cut out a lot of duplicate code.
   - After looking up, a method that helps break down a complex task, handle repetitive logic, or manage
   a specific piece of a larger calculation is called a `helper method`.
+
+---
+
+## Coding Exercise 9: A comprehensive Area Calculator
+
+### Goal
+Write 2 method both named area. One calculates the area of a circle, the othe calculates the area of
+a rectangle.
+
+### Requirements
+
+### area (circle)
+- 1 parameter: double radius
+- `return` the value after finding the area of a circle
+- Validation: `return` -1.0 if the parameters is negative to represent a invalid value
+
+### area (rectangle)
+- 2 parameters: double x, double y
+- `return` the value after finding the area of a rectangle
+- Validation: `return` if either or both of the parameters are negative
+
+### Observations
+- For the first `area` we can you use the built-in Java method `Math.pow()` to get the exponent of a
+value
+- I know that the requirements for the second `area` states "if either or both" but if we check if either
+values are negative then we don't have to worry about it both are negative because it will always exit
+early since one of them is negatve.
