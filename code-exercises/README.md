@@ -239,7 +239,7 @@ from the other, allowing me to cut out a lot of duplicate code.
 
 ---
 
-## Coding Exercise 9: A comprehensive Area Calculator
+## Coding Exercise 9: A Comprehensive Area Calculator
 
 ### Goal
 Write 2 method both named area. One calculates the area of a circle, the othe calculates the area of
@@ -247,12 +247,12 @@ a rectangle.
 
 ### Requirements
 
-### area (circle)
+#### area (circle)
 - 1 parameter: double radius
 - `return` the value after finding the area of a circle
-- Validation: `return` -1.0 if the parameters is negative to represent a invalid value
+- Validation: `return` -1.0 if the parameters is negative to represent an invalid value
 
-### area (rectangle)
+#### area (rectangle)
 - 2 parameters: double x, double y
 - `return` the value after finding the area of a rectangle
 - Validation: `return` if either or both of the parameters are negative
@@ -260,6 +260,30 @@ a rectangle.
 ### Observations
 - For the first `area` we can you use the built-in Java method `Math.pow()` to get the exponent of a
 value
-- I know that the requirements for the second `area` states "if either or both" but if we check if either
-values are negative then we don't have to worry about it both are negative because it will always exit
-early since one of them is negatve.
+- Requirements for the second `area` states "if either or both" but I can check if either value is negative
+to get the same outcome.
+
+---
+
+## Coding Exercise 10: A Minutes-To-Years-And-Days Calculator
+
+### Goal
+Given a set number of minutes calculate the years and days then print them out.
+
+### Requirements
+
+#### printYearsAndDays
+- 1 parameter: long minutes
+- `void`
+- Validation: print `Invalid Value` if parameter is less than 0
+- Format: "`XX` min = `YY` y and `ZZ` d"
+  - `XX` = original value of minutes
+  - `YY` = calculated years
+  - `ZZ` = calculated days
+
+### Observations
+- Whenever I'm tasked with the result being printed out. the method always seems the `return` type of
+`void`
+- Kept calculations as `long` to keep it simple
+- To calculate `remainingDays` you have to find the remainder of days after determining how many years
+can be made.

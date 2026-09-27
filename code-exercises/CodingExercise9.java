@@ -1,3 +1,6 @@
+// Coding Exercise 9 Solution:
+// See README.md for full challenge description
+
 public class CodingExercise9 {
 
     public static void main(String[] args) {
