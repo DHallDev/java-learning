@@ -287,3 +287,45 @@ Given a set number of minutes calculate the years and days then print them out.
 - Kept calculations as `long` to keep it simple
 - To calculate `remainingDays` you have to find the remainder of days after determining how many years
 can be made.
+
+---
+
+## Coding Exercise 11: An Equality Printer
+
+### Goal
+When given 3 numbers, determine if all numbers all the same, they are all different, or Neither are
+equal or different.
+
+### Requirements
+
+#### printEqual
+- 3 parameters: int numValue1, int numValue2, int numValue3
+- `void`
+- Validation: If any number is less than 0: print "Invalid Value"
+- All numbers are equal example: 1, 1, 1
+- All number are different example: 1, 2, 3
+- Neither all are equal or different example: 1, 1, 2
+
+### Observations
+- I don't know if there is a way to reduce the checking the same number over again in `else-if` without
+creating a nested `if`
+
+---
+
+## Coding Exercise 12: Designing A 'Playing Cat' Logic Program
+
+### Goal
+Create a method that needs to determine if the cat is playing based on if it's summer and the temperature 
+
+### Requirements
+
+#### isCatPlaying
+- 2 parameters: boolean summer; int temperature
+- `return`: boolean
+- Cat is playing if temperature is 25-35
+  - If it's summer Cat is playing if temperature is 25-45
+
+#### Observations
+- Since the upper limit is variable so we can use an ternary operator
+- `return` can be one line of code, but reads better if there are to have variables for said choke points
+- 

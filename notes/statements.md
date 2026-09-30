@@ -25,42 +25,49 @@ our HelloWorld.java file is a statement and without it, nothing would have print
 
 ## Examples
 ### 1. Declaration Statements:
-Introduce a variable to the program   
-int age;   
-double price;  
-char grade
+Introduce a variable to the program 
+
+    int age;   
+    double price;  
+    char grade
 
 ### 2. Initialization Statements:
-Assign a value to a variable   
-age = 25;  
-price = 10.99;  
-grade = 'A';
+Assign a value to a variable
+
+    age = 25;  
+    price = 10.99;  
+    grade = 'A';
 
 ### 3. Declaration + Initialization Statements
-Most common   
-int score = 100;  
-boolean isActive = true;
+   
+    int score = 100;  
+    boolean isActive = true;
 
 ### 4. Expressions Statements:
 These produce a value and end with a semicolon.   
-x = x + 1;  
-count++;  
-System.out.println("Hello World");  
+
+    x = x + 1;  
+    count++;  
+    System.out.println("Hello World");  
 
 For more information on what an expression is please see `notes/expressions.md`
 
 ### 5. Method Call Statements
-These Statements call a method to perform an action.  
-System.out.println("Java is fun");  
-$\uparrow$ is the main statement inside my HelloWorld program.
+These Statements call a method to perform an action.
 
-## 6. Control Flow Statements:
+    System.out.println("Java is fun");  
+&uparrow;: is the main statement inside my HelloWorld program.
+
+### 6. Control Flow Statements:
 These are used to change the flow from normal top-to-bottom to something else.  
-- # TBD
+- If-Else Statements (see examples in `notes/if-conditionals.md`)
+- Switch Statements (see examples in `notes/switch.md`)
 
 ## Premium example of example in HelloWorld.java
-My first program `HelloWorld.java` contains a method call statement.  
-System.out.println("Hello Word");  
+My first program `HelloWorld.java` contains a method call statement.
+
+    System.out.println("Hello Word");  
+
 This is a complete instruction:
 - call the Java built-in `println` method
 - pass the String literal `"Hello World"` as an argument

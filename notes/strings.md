@@ -1,14 +1,14 @@
 ## Strings
 A string is a sequence of characters used to store text. Unlike primitive data types, Strings are  
-**objects**. This needs to be remebered because they behave like the other data types. They are one  
+**objects**. This needs to be remembered because they behave like the other data types. They are one  
 of the most commonly used types in Java
 
 ## Rules & Mechanics
 - They are **OBJECTS, NOT PRIMITIVES**
 - Created using double quotes (`" "`), not single quotes
-- Immutiable - meaning once they are created, their value cannot change
+- Immutable - meaning once they are created, their value cannot change
   - This means any modification done to the String actual creates a **new** String
-- Can call methods on Strings (since they're objects)
+- Can call methods on Strings (since they are objects)
 - Can be concatenated using `+` or `+=`
 
 ## Why is this important
@@ -30,7 +30,7 @@ String message = "Hello World";
 Strings can't be changed once created  
 String name = "Darius";  
 name = name + " Johnson";  
-$\uparrow$: Did **not** modify name - I created a new String with the name `name` that holds the value
+&uparrow;: Did **not** modify name - I created a new String with the name `name` that holds the value
 `"Darius Johnson"`. 
 
 ### Common String Operations
@@ -39,12 +39,13 @@ String  fullName = firstName + " " + lastName;
 
 ### Escape Sequences
 These are used to include special characters inside Strings.
-- `\"` $\rightarrow$ double quote
-- `\\` $\rightarrow$ backslash
-- `\n` $\rightarrow$ new line
-- `\t` $\rightarrow$ tab
+- `\"` &rarr; double quote
+- `\\` &rarr; backslash
+- `\n` &rarr; new line
+- `\t` &rarr; tab
+
 #### Example:
-String text = "He said \"Hello\" to me.";
+    String text = "He said \"Hello\" to me.";
 
 ### Premium usage of Strings in my `HelloWorld.java`
 My first program uses a String literal:  
