@@ -30,12 +30,6 @@ This lesson also shows the two different kinds of `switch` statements: `Traditio
 
 Main Lesson: Examples of the differences between `Traditional`, `Enhanced`, and the `If-Else`
 
-### SwitchChallenge.java
-
-Challenge: Use a `traditional switch` statement to check a letter, and print out that letters NATO word (up to E).
-
-
-
 --- 
 
 ## Related Notes
