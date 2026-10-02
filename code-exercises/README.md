@@ -326,6 +326,62 @@ Create a method that needs to determine if the cat is playing based on if it's s
   - If it's summer Cat is playing if temperature is 25-45
 
 #### Observations
-- Since the upper limit is variable so we can use an ternary operator
+- Since the upper limit is variable so we can use a ternary operator
 - `return` can be one line of code, but reads better if there are to have variables for said choke points
-- 
+
+---
+
+# Coding Exercise 13: Determining Word Representation Of Numbers Accurately
+
+## Goal:
+
+Write a method called printNumberInWord. The method has one parameter **number** which is the whole number. The method needs to print
+**"ZERO", "ONE", "TWO",... "NINE", "OTHER"** if the int parameter number is **0, 1, 2, ... 9** or **other** for any other number including negative numbers. 
+
+## Requirements:
+- `printNumberInWord`
+  - Parameter(s): `int` number
+  - Return Type: `void`
+  - Output: Print out the number in word format
+
+## Notes/Observations:
+- Problem can be solved with either an `if-else` statement or a `switch` statement.
+- If you use an `enhanced switch` you can place it inside an `System.out.println` statement.
+- Can assign the word directly to a variable
+  - Makes it more readable
+  - Doesn't have the problem of changing a `String` since variable is discarded once method is done running.
+
+---
+
+# Coding Exercise 14: Computing Month Length with Leap Year Consideration
+
+## Goal:
+
+Write a method isLeapYear with a parameter of type int named **year**. The parameter needs to be **greater than or equal to 1** and
+**less than or equal to 9999**. If the parameter is not in that range return **false**. Otherwise, if it is in the valid range,
+calculate if the year is a leap year and return **true** if it is.
+
+Write another method named **getDaysInMonth** with two parameters **month** and **year**. Both of type **int**. If month is **< 1** or **> 12** return -1. If year is
+**< 1** or **> 9999** return **-1**. This method needs to return the number of days in the month.
+
+## Requirements
+- `isLeapYear`
+  - Parameter(s): `int` year
+  - Return Type: `boolean`
+  - Validation: **year** needs to be > 1 and < 9999
+  - Output: `true` &rarr; month is a leap year; `false` &rarr; if month is not a leap year
+
+- `getDaysInMonth`
+  - Parameter(s): `int` month, `int` year
+  - Return Type: `int`
+  - Validation: **month** needs to be >= 1 and <= 12; **year** needs to be > 1 and < 9999
+  - Output: days in the month based on if the year is a leap year
+    - The only month that changes is February
+
+## Notes/Observations:
+- I can use the code for `isLeapYear` from **Coding Exercise 5: Implementing A Precise Leap Year Calculator**
+- I can use an `enhanced switch` to return directly from `getDaysInMonth`
+- I can run the validation check for `month` inside of the `enhanced switch`
+  - This mixes the responsibilities between the validation `if` statement and the `switch` statement.
+- I can use the ternary operator to choose between 28 and 29 for February based on result from `isLeapYear`
+- I made the default 31 due the amount of months that have 31 days.
