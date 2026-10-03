@@ -236,3 +236,152 @@ pass each age as an argument to `isTeen`
 from the other, allowing me to cut out a lot of duplicate code.
   - After looking up, a method that helps break down a complex task, handle repetitive logic, or manage
   a specific piece of a larger calculation is called a `helper method`.
+
+---
+
+## Coding Exercise 9: A Comprehensive Area Calculator
+
+### Goal
+Write 2 method both named area. One calculates the area of a circle, the othe calculates the area of
+a rectangle.
+
+### Requirements
+
+#### area (circle)
+- 1 parameter: double radius
+- `return` the value after finding the area of a circle
+- Validation: `return` -1.0 if the parameters is negative to represent an invalid value
+
+#### area (rectangle)
+- 2 parameters: double x, double y
+- `return` the value after finding the area of a rectangle
+- Validation: `return` if either or both of the parameters are negative
+
+### Observations
+- For the first `area` we can you use the built-in Java method `Math.pow()` to get the exponent of a
+value
+- Requirements for the second `area` states "if either or both" but I can check if either value is negative
+to get the same outcome.
+
+---
+
+## Coding Exercise 10: A Minutes-To-Years-And-Days Calculator
+
+### Goal
+Given a set number of minutes calculate the years and days then print them out.
+
+### Requirements
+
+#### printYearsAndDays
+- 1 parameter: long minutes
+- `void`
+- Validation: print `Invalid Value` if parameter is less than 0
+- Format: "`XX` min = `YY` y and `ZZ` d"
+  - `XX` = original value of minutes
+  - `YY` = calculated years
+  - `ZZ` = calculated days
+
+### Observations
+- Whenever I'm tasked with the result being printed out. the method always seems the `return` type of
+`void`
+- Kept calculations as `long` to keep it simple
+- To calculate `remainingDays` you have to find the remainder of days after determining how many years
+can be made.
+
+---
+
+## Coding Exercise 11: An Equality Printer
+
+### Goal
+When given 3 numbers, determine if all numbers all the same, they are all different, or Neither are
+equal or different.
+
+### Requirements
+
+#### printEqual
+- 3 parameters: int numValue1, int numValue2, int numValue3
+- `void`
+- Validation: If any number is less than 0: print "Invalid Value"
+- All numbers are equal example: 1, 1, 1
+- All number are different example: 1, 2, 3
+- Neither all are equal or different example: 1, 1, 2
+
+### Observations
+- I don't know if there is a way to reduce the checking the same number over again in `else-if` without
+creating a nested `if`
+
+---
+
+## Coding Exercise 12: Designing A 'Playing Cat' Logic Program
+
+### Goal
+Create a method that needs to determine if the cat is playing based on if it's summer and the temperature 
+
+### Requirements
+
+#### isCatPlaying
+- 2 parameters: boolean summer; int temperature
+- `return`: boolean
+- Cat is playing if temperature is 25-35
+  - If it's summer Cat is playing if temperature is 25-45
+
+#### Observations
+- Since the upper limit is variable so we can use a ternary operator
+- `return` can be one line of code, but reads better if there are to have variables for said choke points
+
+---
+
+# Coding Exercise 13: Determining Word Representation Of Numbers Accurately
+
+## Goal:
+
+Write a method called printNumberInWord. The method has one parameter **number** which is the whole number. The method needs to print
+**"ZERO", "ONE", "TWO",... "NINE", "OTHER"** if the int parameter number is **0, 1, 2, ... 9** or **other** for any other number including negative numbers. 
+
+## Requirements:
+- `printNumberInWord`
+  - Parameter(s): `int` number
+  - Return Type: `void`
+  - Output: Print out the number in word format
+
+## Notes/Observations:
+- Problem can be solved with either an `if-else` statement or a `switch` statement.
+- If you use an `enhanced switch` you can place it inside an `System.out.println` statement.
+- Can assign the word directly to a variable
+  - Makes it more readable
+  - Doesn't have the problem of changing a `String` since variable is discarded once method is done running.
+
+---
+
+# Coding Exercise 14: Computing Month Length with Leap Year Consideration
+
+## Goal:
+
+Write a method isLeapYear with a parameter of type int named **year**. The parameter needs to be **greater than or equal to 1** and
+**less than or equal to 9999**. If the parameter is not in that range return **false**. Otherwise, if it is in the valid range,
+calculate if the year is a leap year and return **true** if it is.
+
+Write another method named **getDaysInMonth** with two parameters **month** and **year**. Both of type **int**. If month is **< 1** or **> 12** return -1. If year is
+**< 1** or **> 9999** return **-1**. This method needs to return the number of days in the month.
+
+## Requirements
+- `isLeapYear`
+  - Parameter(s): `int` year
+  - Return Type: `boolean`
+  - Validation: **year** needs to be > 1 and < 9999
+  - Output: `true` &rarr; month is a leap year; `false` &rarr; if month is not a leap year
+
+- `getDaysInMonth`
+  - Parameter(s): `int` month, `int` year
+  - Return Type: `int`
+  - Validation: **month** needs to be >= 1 and <= 12; **year** needs to be > 1 and < 9999
+  - Output: days in the month based on if the year is a leap year
+    - The only month that changes is February
+
+## Notes/Observations:
+- I can use the code for `isLeapYear` from **Coding Exercise 5: Implementing A Precise Leap Year Calculator**
+- I can use an `enhanced switch` to return directly from `getDaysInMonth`
+- I can run the validation check for `month` inside of the `enhanced switch`
+  - This mixes the responsibilities between the validation `if` statement and the `switch` statement.
+- I can use the ternary operator to choose between 28 and 29 for February based on result from `isLeapYear`
+- I made the default 31 due the amount of months that have 31 days.

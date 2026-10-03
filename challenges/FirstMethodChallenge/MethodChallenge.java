@@ -11,9 +11,24 @@ public class MethodChallenge {
         displayHighScore("Lily", calculateHighScore(500));
         displayHighScore("Frank", calculateHighScore(100));
         displayHighScore("Shakespeare", calculateHighScore(25));
+
+        System.out.println("--------------------------------------------------------------------");
+
+        displayHighScore("Grace", 1500);
+        displayHighScore("Bob", 1000);
+        displayHighScore("Lily", 500);
+        displayHighScore("Frank", 100);
+        displayHighScore("Shakespeare", 25);
     }
 
-    public static void displayHighScore(String playerName, int highScorePosition) {
+//    public static void displayHighScore(String playerName, int highScorePosition) {
+//        System.out.println(playerName + " managed to get into position " + highScorePosition +
+//                " on the high score list.");
+//    }
+
+    public static void displayHighScore(String playerName, int score) {
+        int highScorePosition = calculateHighScore(int score);
+
         System.out.println(playerName + " managed to get into position " + highScorePosition +
                 " on the high score list.");
     }
