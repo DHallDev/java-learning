@@ -1,14 +1,24 @@
-## Primitive Data Types
-Primitive data types are the most basic forms of data in Java. They store simple values directly in memory and are not objects. Every variable you create using a primitive type holds a single, simple value.
+# Primitive Data Types
+
+Primitive data types are the most basic forms of data in Java. They store simple values directly in memory and are not objects. Every variable you 
+create using a primitive type holds a single, simple value.
+
+---
 
 ## Rules & Mechanics:
+
 - Has a fixed size and range
 - Use the correct word as the identifier
 - Assigned data value must match the type
 - Values are stored directly, not as objects
 - Can't call methods on primitive data types (except through wrapper classes)
 
-## The 8 Primitive Types
+---
+
+## Structure Of Primitive Data Types
+
+### The 8 Primitive Types
+
 | Type | Size | Range / Meaning | Example                    |
 | --- | --- | --- |----------------------------|
 | `byte` | 1 byte | -128 to 127 | `byte b = 10;`             |
@@ -20,50 +30,63 @@ Primitive data types are the most basic forms of data in Java. They store simple
 | `char` | 2 bytes | single Unicode character | `char letter = 'A';`       |
 | `boolean` | 1 byte (conceptually) | true or false | `boolean isActive = true;` |
 
-## Examples
-**Integer types:**
-- int score = 100;
-- long population = 8000000L;
+### Default Values:
 
-**Floating-point types:**
-- float temperature = 98.6f;
-- double radius = 3.14;
-
-**Character:**
-- char grade = 'A';
-
-**Boolean:**
-- boolean isAwake = true;
-
-## Why is this important:
-Primitive types allow your program to:
-- store numbers
-- store characters
-- store true/false values
-- perform calculations
-- control logic
-- build more complex structures later (arrays, objects, collections)
-
-They are the foundation of Java’s type system.
-
-## Default Values:
-When used for fields or classes 
-- byte, short, int, long $\rightarrow$ `0`
-- float, double $\rightarrow$ `0.0`
-- char $\rightarrow$ `'\u0000'`
-- boolean $\rightarrow$ `false`
+When used for fields or classes
+- `byte`, `short`, `int`, `long` &rarr; `0`
+- `float`, `double` &rarr; `0.0`
+- `char` &rarr; `'\u0000'`
+- `boolean` &rarr; `false`
 
 Local variables do not get default values
 
+### Integer types:
+
+    int score = 100;
+    long population = 8000000L;
+
+### Floating-point types:
+
+    float temperature = 98.6f;
+    double radius = 3.14;
+
+### Character:
+
+    char grade = 'A';
+
+### Boolean:
+
+    boolean isAwake = true;
+
+---
+
+## Why Is This Important:
+
+Primitive types allow your program to:
+- Store numbers
+- Store characters
+- Store true/false values
+- Perform calculations
+- Control logic
+- Build more complex structures later (arrays, objects, collections)
+
+They are the foundation of Java’s type system.
+
+---
+
 ## Common mistakes:
+
 - Incompatible data (e.g. `int x = 5.5`);
-- Using double quotes (" ") instead of single quotes (' ') for `char` data types
-- forgetting the `f` suffix for `float`
+- Using double quotes (`" "`) instead of single quotes (`' '`) for `char` data types
+- Forgetting the `f` suffix for `float`
 - Overflow: Using an expression that evaluates to a larger value than what is allowed in a data type 
 - Underflow: Using an expression that evaluates to a smaller value than what is allowed 
 in a data type
 
+---
+
 ## Summary:
+
 Primitive types store simple values directly in memory. They are the foundation for all other data
 structures  in Java. This leads to:
 - variables
@@ -78,9 +101,9 @@ structures  in Java. This leads to:
 - `int` is the default data type for whole numbers
 - `double` is the default data type for floating-point numbers
 - Assigning a literal value that goes over/under the max/min value results in a error "lossy 
-conversion" when using a different data type or "integer number too large" when using an int;
-- The Java compiler evaluates constant expressions, but not variable expressions (more information on
-in `casting.md`)
-- Can use scientific notation instead when declaring a double or float variable
+  conversion" when using a different data type or "integer number too large" when using an int;
+- The Java compiler evaluates **constant expressions**, but not **variable expressions** 
+  - More information can be found in `notes/casting.md`
+- Can use scientific notation instead when declaring a `double` or `float` variable
 - Adding `char` values will get their byte values returned
 - You can use a unicode for a `char`
