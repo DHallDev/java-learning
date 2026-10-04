@@ -1,79 +1,105 @@
-## Casting
-Casting is the process of converting one numeric data type into another
+# Casting
 
-## Rules & Mechanics
+Casting is the process of converting one numeric data type into another.
+
+---
+
+## Rules & Mechanics:
+
 - Casting converts a value from one type to another
-- Some conversions happen **automatically**, this is called (widening)
-- Some conversions require **manual** casting, this is called (narrowing)
-- Narrowing can cause you to **lose data**
-- Casting only works between **compatible** types
-- Casting doesn't change the original variable - it creates a new value!
+- Some conversions happen **automatically** &rarr; widening
+  - Order: `byte` &rarr; `short` &rarr; `int` &rarr; `long` &rarr; `float` &rarr; `double`
+- Some conversions require **manual** casting &rarr; narrowing
+  - Narrowing can cause you to **lose data**
+- Casting only works between **compatible types**
+- Casting doesn't modify the original variable - it creates a new value!
 
-## Why is this imporatant
+---
+
+## Why is this important:
+
 Allows my program to:
-- mix different numeric data types
-- perform calculations safely
-- avoid complier errors
-- control precision
-- convert values intentionally
+- Mix different numeric data types
+- Perform calculations safely
+- Avoid complier errors
+- Control precision
+- Convert values intentionally
 
 This process is most commonly used when working with math expressions
 
-## Examples
+---
+
+## Structures of Casting:
+
 ### 1. Widening Casting (Automatic)
-Converts a smaller type into a larger type.  
-Safe - no data loss.  
-Order:  
-`byte` $\rightarrow$ `short` $\rightarrow$ `int` $\rightarrow$ `long` $\rightarrow$ `float` $\rightarrow$ `double`  
+
+Converts a smaller type into a larger type.
+
 #### Example:
-int myInt = 10;  
-double myDouble = myInt;    // automatic
+
+    int myInt = 10;  
+    double myDouble = myInt;    // automatic widening
 
 ### 2. Narrowing Casting (Manual)
-Converts a larger type into a smaller type.  
-Risky - could be some data loss or even lead to overflow.  
-Requires `()`:  
-double myDouble = 9.8;  
-int myInt =(int) myDouble;  // manual  
-Result: `myInt = 9` (decimal is truncated)
+
+Converts a larger type into a smaller type. Requires the use of `()`:
+
+    double myDouble = 9.8;  
+    int myInt = (int) myDouble;    // manual casting  
+
+Result: `myInt = 9` (the decimal is truncated)
 
 ### 3. Casting in Expressions
-The complier treats **constant expressions** differently from **variable expressions**
+
+The complier treats **constant expressions** differently from **variable expressions**. Basically Java can evaluate math if you use literal values, but gets
+confused when you replace them with variables instead:
+
 #### Constant Expression (OK)
-byte x = 10 / 2;    // OK (compiler knows the result is 5)
+    byte x = 10 / 2;    // OK (complier knows the result is 5)
 
 #### Variable Expressions (ERROR)
-byte a = 10;  
-byte b = a / 2;     // ERROR (must cast)  
-Fix:  
-byte b = (byte) (a / 2);
+
+    byte a = 10;  
+    byte b = a / 2;    // ERROR (must cast)  
+
+#### Fix:  
+    byte b = (byte) (a / 2);
 
 ### 4. Casting with Characters
-`char` can be cast to and from numeric types.  
-char letter = 'A';  
-int code = letter;      // 65
-char next = (char) (letter + 1);    // 'B'
 
-## Common Mistakes
+`char` can be cast to and from numeric data types.
+
+    char letter = 'A';  
+    int code = letter;    // 65
+    char next = (char) (letter + 1);    // 'B'
+
+---
+
+## Common Mistakes:
+
 - Forgetting to cast during narrowing
-- Assuming casting rounds values (it truncates)
+- Assuming casting **rounds** values (it **truncates**)
 - Casting incompatible types
 - Overflow when narrowing large values
 - Using casting to "fix" logic errors
 - Confusing `char` casting with String conversion
 
-## Summary
+---
+
+## Summary:
+
 Casting converts values between compatible types.  
-- **widening** (automatic, safe)
-- **narrowing** (manual, risky)  
+- **widening** &rarr; safe, automatic
+- **narrowing** &rarr; risky, manual  
 
 Essential for:
-- arithmetic
-- percision control
-- mixing types
-- avoiding compiler errors
+- Arithmetic
+- Precision control
+- Mixing types
+- Avoiding compiler errors
 
-## Side-Notes
+## Side-Notes:
+
 - Narrowing can cause overflow or underflow
 - Casting does not modify the original variable
 - Integer division always truncates
