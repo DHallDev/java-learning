@@ -106,4 +106,3 @@ structures  in Java. This leads to:
   - More information can be found in `notes/casting.md`
 - Can use scientific notation instead when declaring a `double` or `float` variable
 - Adding `char` values will get their byte values returned
-- You can use a unicode for a `char`

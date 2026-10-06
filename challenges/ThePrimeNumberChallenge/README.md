@@ -22,4 +22,3 @@ Was created with Tim Buchalka
 ## Notes:
 - In the solution, Tim put the `break` inside the isPrime check. It works the same as mine, but I feel like mine is more readable since it keeps the
 responsibilities separate.
-- `break` was not needed, I could have put `primeCounter < 3` inside the `for` statement header.

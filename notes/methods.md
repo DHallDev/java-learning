@@ -96,4 +96,3 @@ method when it is invoked.
 - You can pass literal values or variable names as arguments. 
   - I should choose whichever version makes my code more readable.
 - The `return` statement is usually placed right before the closing brace of the method
-- A method call can be used as an expression or a standalone statement.

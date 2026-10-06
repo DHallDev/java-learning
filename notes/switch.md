@@ -122,5 +122,3 @@ By understanding the `switch` statement, I can avoid super complex `else-if` cha
         }
       };
     }
-
-- When using an `switch expression` a `;` should be added after the closing `{}`.

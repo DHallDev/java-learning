@@ -37,4 +37,3 @@ the time in hours with the remaining minutes and seconds.
 I think it's better served to have them as separate `if` statements, just like Tim has in his solution
 video. I think the reasoning behind this is because these are not mutual checks (seconds does not need
 minutes to be positive to be under 0 or over 59). I also believe this will tie into logging errors in
-future lessons if we ever go into it.

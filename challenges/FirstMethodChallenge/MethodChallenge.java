@@ -47,3 +47,4 @@ public class MethodChallenge {
         return position;
     }
 }
+

@@ -33,5 +33,3 @@ Main Lesson: Examples of the differences between `Traditional`, `Enhanced`, and 
 --- 
 
 ## Related Notes
-
-- **Switch:** `notes/switch.md`

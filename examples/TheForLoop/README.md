@@ -26,5 +26,3 @@ Shows example code of using a `for` loop to count from 1 to 5. More example code
 --- 
 
 ## Related Notes
-
-- **Switch:** `notes/for-loop.md`

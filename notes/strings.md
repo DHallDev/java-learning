@@ -69,4 +69,3 @@ They are:
 ## Side-Notes
 - String concatenation creates new objects
 - Many String methods return **new** Strings
-- The `.equals()` methods compares the values

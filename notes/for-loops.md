@@ -61,4 +61,3 @@ predictable repetition.
 ## Side-note:
 
 - The loop variable is known as the **iteration variable** so most name it `i` during the initialization portion of the loop.
-- The `break` keyword can be used to exit a loop early

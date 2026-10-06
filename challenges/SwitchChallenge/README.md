@@ -42,4 +42,3 @@ As a comparison create another method that does the same thing but uses an `if-e
 ## Notes:
 - `printWeekDay` showcased how much of a hassle having mulitple `if-else if` chains can be when you are just conduction simple checks
 - You can't just assign the value to variable in an `if-else` the same way you can in an `enhanced switch`
-- The second method can be seen as unoptimal since we technically destroyed the String and made a new one if day is between 0-6.

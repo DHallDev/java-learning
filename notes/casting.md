@@ -104,4 +104,3 @@ Essential for:
 - Casting does not modify the original variable
 - Integer division always truncates
 - `float` and `double` lose precision when narrowed
-- `char` casting reveals Unicode values
