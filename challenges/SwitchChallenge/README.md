@@ -20,7 +20,7 @@ Using a `traditional switch` when given a letter, print out the NATO word for it
 
 ## Goal
 
-Create a method that returns an String value contain they day of the week based on the number given.  
+Create a method that returns a String value contain they day of the week based on the number given.  
 As a comparison create another method that does the same thing but uses an `if-else` statement.
 
 ## Requirements:

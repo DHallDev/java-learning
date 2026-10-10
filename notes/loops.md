@@ -1,5 +1,5 @@
 # Loops
-A loop is a control-flow structure  that repeats blocks of code while a condition is true or until a specifice endpoint is reached. There are **three main loop types**:
+A loop is a control-flow structure  that repeats blocks of code while a condition is true or until a specific endpoint is reached. There are **three main loop types**:
 - **for loops** &rarr; repeats a certain number of times.
 - **while loops** &rarr; repeat while a condition is true
 - **do-while loops** &rarr; repeats at least once, then checks if condition is true
@@ -18,7 +18,7 @@ A loop is a control-flow structure  that repeats blocks of code while a conditio
 
 ## Why Is This Important
 Loops allow my program to:
-- automate reptitive task
+- automate repetitive task
 - process data efficiently
 - react to changing conditions
 - reduce code duplication
@@ -73,7 +73,7 @@ A **while loop** repeats **as long as** a condition is true.
 - Used for:
   - Waiting for user input
   - running until a state changes
-  - game loops or continous checks
+  - game loops or continuous checks
 
 #### Basic Structure
 
@@ -133,8 +133,8 @@ A **do-while loop** guarantees the code runs **at least once**.
 - Forgetting to update the loop variable (infinite loop)
 - Writing a condition that never becomes false
 - Modifying the loop counter inside the loop body
-- Using a `for` loop when a `while` loop is more apppropriate
-- Forgetting braces when multiple statments are inside the loop
+- Using a `for` loop when a `while` loop is more appropriate
+- Forgetting braces when multiple statements are inside the loop
 
 ---
 
@@ -151,3 +151,8 @@ Loops allows Java to repeat code automatically. Essential for:
 - Infinite loops can be intentional
 - Boolean expressions control every loop
 - `break` and `continue` can modify loop behavior
+  - `break` exits the loop entirely
+  - `continue` skips the code at the bottom to go to the next iteration
+- It might be better to format a `while` loop like a `for` loop, meaning to 
+  increment at the end of a loop
+  - This allows the initial variable to be checked.
