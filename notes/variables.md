@@ -1,5 +1,4 @@
 # Variables
-
 A variable is a type of container we create to store information to be accessed later. Every variable
 in Java has **three things**:
 - a **type** &rarr; the kind of data it holds
@@ -9,7 +8,6 @@ in Java has **three things**:
 ---
 
 ## Rules & Mechanics
-
 - Can't have incompatible data inside
 - Must be declared before use
 - Type must be specified using a **Java keyword**
@@ -20,7 +18,6 @@ in Java has **three things**:
 ---
 
 ## Why is this important
-
 Variables allow my program to:
 - Remember information
 - Perform calculations
@@ -34,20 +31,17 @@ Variables allow my program to:
 
 ### Declaration vs. Initialization:
 
-#### Declaration 
-
+#### Declaration
 This is you telling Java that a variable exist and Java will reserve memory for it:
 
     int age;
 
-#### Initialization 
-
+#### Initialization
 This is when you give the variable a value:
 
     age = 25;
 
 #### Declaration & Initialization
-
 When you know exactly what value you want to put inside the variable when declaring it, why waste time.
 
     int age = 25;
@@ -63,7 +57,6 @@ When you know exactly what value you want to put inside the variable when declar
 ---
 
 ## Common Mistakes:
-
 - Forgetting to initialize a variable
 - Using the wrong type
 - Naming variables poorly
@@ -76,7 +69,6 @@ When you know exactly what value you want to put inside the variable when declar
 ---
 
 ## Summary:
-
 Variables are the building blocks of Java programs. They store data, allow calculations, and make code
 dynamic. Understanding variables sets the foundation for:
 - operators
