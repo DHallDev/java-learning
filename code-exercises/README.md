@@ -407,3 +407,24 @@ inclusive range.
 ## Solution File
 `CodingExercise15.java`
 
+---
+
+# Coding Exercise 16: Identifying Palindromic Numbers For Enhanced Numeric Validation
+
+## Problem Summary:
+Implement a method that returns `true` or `false` if the parameter is a Palindrome.
+
+## Requirements:
+- Method isPalindrome(int number)
+- Return `true` if number is a Palindrome
+- Return `false` if number isn't a Palindrome
+
+
+## Approach:
+
+
+## Key Observations:
+
+
+## Solution.File
+`CodingExercise16.java`
