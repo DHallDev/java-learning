@@ -1,14 +1,12 @@
 # Expressions
-An expression in Java is basically anything that **produces a value**.  
-You can find expressions EVERYWHERE!
-
+An expression in a construct in Java that **produces a value**.You can find expressions EVERYWHERE!
 - Assignments
 - Calculations
 - Comparisons
 - Boolean Logic
-- Method calls (see notes/method.md)
+- Method calls (see `notes/method.md`)
 
-Understanding expressions is important - **every line in Java contains at least one expression*.*
+Understanding expressions is important - **every line in Java contains at least one expression.**
 
 ---
 

@@ -31,8 +31,6 @@ This process is most commonly used when working with math expressions
 ### 1. Widening Casting (Automatic)
 Converts a smaller type into a larger type.
 
-#### Example:
-
     int myInt = 10;  
     double myDouble = myInt;    // automatic widening
 

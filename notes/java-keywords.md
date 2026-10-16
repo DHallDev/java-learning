@@ -1,29 +1,29 @@
-## Java Keywords
-A keyword are **reserved words** that have special meaning in the language
+# Java Keywords
+A keyword are **reserved words** that have special meaning in the Java language.
+
+---
 
 ## Rules & Mechanics:
 - Always lowercase
-- Can't be used as identifiers
+- Can't be used as naming conventions
 - Can't be changed or redefined
 
+---
+
 ## Why is this Important:
-Keywords tell the complier what kind of data is being used and how to use it. Specifically it helps:
+Keywords tell the complier what kind of data I am using or how I am trying to structure my code. Specifically it helps:
 - define classes
 - declare variables
 - control logic
 - structure methods
 - handles exceptions
--  manage ineritance
 
-Without keywords, the Java code will have no structure
+---
 
 ## Categories of Keywords
 Organization of keywords: will update when more is learned
 
-**Declaration Keywords**
-- `class`
-
-**Primitive Type Keywords**
+### 1. Primitive Type Keywords
 - `byte`
 - `short`
 - `int`
@@ -31,30 +31,33 @@ Organization of keywords: will update when more is learned
 - `float`
 - `double`
 - `char`
-- ` boolean`
+- `boolean`
 
-**Control Flow Keywords**
+### 2. Control Flow Keywords
 - TBD
 
-**Access Modifiers**
+### 3. Access Modifiers
 - TBD
 
-**Class & Object Keywords**
+### 4. Class & Object Keywords
 - TBD
 
-**Exception Handling Keywords**
+### 5. Exception Handling Keywords
 - TBD
+
+---
 
 ## Common Mistakes
 - Using keywords as variable names
 - Capitilizing keywords
+
+---
 
 ## Summary
 Keywords define the structure and rules of Java. Specifically the control:
 - declaration
 - logic
 - classes
-- inheritance
 - exceptions
 - access
 - memory behavior
