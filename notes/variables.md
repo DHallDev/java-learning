@@ -1,6 +1,6 @@
 # Variables
 A variable is a way to store information on my computer RAM (random access memory). They are then accessed later by using the name I give them. Every variable in Java
-consits of **three things**:
+consists of **three things**:
 - **type** &rarr; the kind of data it holds
 - **name** &rarr; how you refer/call it
 - **value** &rarr; the actual data stored

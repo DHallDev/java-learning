@@ -98,4 +98,13 @@ structures  in Java. This leads to:
 - The Java compiler evaluates **constant expressions**, but not **variable expressions**
 - Can use scientific notation instead when declaring a `double` or `float` variable
 - If a number is too large to read you can use `_` where comma's would be.
+- `char` have a Unicode value and an integer value:
+
+      char mySimpleChar = '?';
+      char myUnicodeChar = '\u003f';
+      char myDecimalChar = 63;
+
 - Adding `char` values will get their byte values returned
+- When creating a boolean variable, it's best practice to name like a question:
+
+      boolean isCustomerOverTwentyOne = true;

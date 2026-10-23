@@ -1,18 +1,10 @@
 # Expressions
-An expression in a construct in Java that **produces a value**.You can find expressions EVERYWHERE!
-- Assignments
-- Calculations
-- Comparisons
-- Boolean Logic
-- Method calls (see `notes/method.md`)
-
-Understanding expressions is important - **every line in Java contains at least one expression.**
+An expression is formed by combining variables, literals, method return values and operators. They are a way of forming and combining those values to produce a result.
 
 ---
 
 ## Why Is This Important
 Every Java program is a combination of expressions and statements. They lead into:
-
 - statements
 - conditionals
 - loops
@@ -64,4 +56,4 @@ Expressions are anything that produces a value, and They appear in **EVERY LINE*
 - Statements and expressions are completely different.
   - An expression becomes a **statements** onl when a `;` is added.
 - A method call is an expression **if it returns a value**.
-- You can even chain multiple expressions into a even larger expression.
+- You can even chain multiple expressions into even larger expression.

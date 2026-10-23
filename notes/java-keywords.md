@@ -1,5 +1,5 @@
 # Java Keywords
-A keyword are **reserved words** that have special meaning in the Java language.
+Java keywords are **reserved words** that have special meaning in the Java language.
 
 ---
 
@@ -49,7 +49,7 @@ Organization of keywords: will update when more is learned
 
 ## Common Mistakes
 - Using keywords as variable names
-- Capitilizing keywords
+- Capitalizing keywords
 
 ---
 

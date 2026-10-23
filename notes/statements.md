@@ -62,7 +62,7 @@ These statements call a method to perform an action.
 
     System.out.println("Java is fun");
 
-Above is the main statement inside `HelloWorld.java`.`System.out.println` is a buitlin method provided by Java
+Above is the main statement inside `HelloWorld.java`.`System.out.println` is a builtin method provided by Java
 
 ### 6. Control Flow Statements:
 These are used to change the flow from normal **top-to-bottom**.  
