@@ -12,15 +12,15 @@ Java fundamentals.
 Implement a method that prints whether a given integer is positive, negative or zero.
 
 ## Requirements:
-- Method checkNumber(int number)
-- Print `positive` if number > 0
-- Print `negative` if number < 0
-- Print `zero` if number = 0
+### 1. Method checkNumber(int number)
+- Return Type: `void`
+- if number > 0 &rarr; Print `positive`
+- if number < 0 &rarr; Print `negative`
+- if number = 0 &rarr; Print `zero`
 
 ## Approach:
 - Avoided nested ternaries for readability.
-- Used separate `if` statements with early exits.
-- No else used due to `if` statements printing and exiting early.
+- No else used due to `if-statements` printing and exiting early.
 
 ## Key Observations:
 - Early returns prevent fall-through to code below
@@ -38,29 +38,31 @@ Implement two methods: `toMilesPerHour` to calculates kilometers per hour to mil
 conversion.
 
 ## Requirements
-- printConversion()
-  - Print Invalid Value if kilometersPerHour < 0.
+### 1. printConversion()
+  - Return Type: `void`
+  - Validation check:
+    - if kilometersPerHour < 0 &rarr; Print "Invalid Value".
   - Use toMilesPerHour as a helper.
   - Prints the message **XX km/h = YY mi/h**:
     - **XX** is the `kilometersPerHour`.
     - **YY** is the `milesPerHour`.
-- toMilesPerHour(double kilometersPerHour)
-  - return -1 if kilometersPerHour < 0
+### 2. toMilesPerHour(double kilometersPerHour)
+  - Return Type: `long`
+  - Validation Check: 
+    - if kilometersPerHour < 0 &rarr; return -1
   - Use `Math.round()`
   - return the conversion of kilometers to miles:
-    - 1 mile per hour is 1.609 kilometers per hour.
-
+    - 1 mile is 1.609 kilometers.
 
 ## Approach
 - Validate inputs in `if` statements and early `return`.
 - Avoided ternary for readability.
-- Return the calculation from `Math.round`.
+- Return the result directly from `Math.round()` calculation.
 
 ## Key Observations
 - Returning calucation and validation as a ternary mixes logic impacting readability.
-- `Math.round` returns a long.
 - Using helper methods help reduce duplication and improves readability.
-- Invoke a method inside a `println()` unless value is needed later. 
+- Better to not put calculation/method invocation directly into `println()` to keep it clean
 
 ## Solution File
 `CodingExercise2.java`
@@ -69,77 +71,75 @@ conversion.
 
 ## Coding Exercise 3: Accurate Megabytes Converter
 
-### Goal
-Write a method that takes in kilobytes and calculates the total megabytes and remaining kilobytes, 
-and then prints out a message
+### Goal:
+Write a method that takes in kilobytes and calculates the total megabytes and remaining kilobytes, and then prints it out in a message.
 
-### Requirements
-
-#### printMegaBytesAndKiloBytes
-- 1 parameter: int kiloBytes
-- No `return`
-- Validation check: if kiloBytes < 0 print "Invalid Value"
-- Calculates total megabytes and remaining kilobytes
+### Requirements:
+#### 1. printMegaBytesAndKiloBytes(`int` kiloBytes)
+- Return Type: `void`
+- Validation check: 
+  - if kiloBytes < 0 &rarr; print "Invalid Value"
+- Calculate total megabytes and remaining kilobytes
 - Prints message: "**XX** KB = **YY** MB and **ZZ** KB"
-- XX = the original value of kilobytes
-- YY = the calculated megabytes
-- ZZ = the remaining kilobytes
-- 1 MB = 1024KB
+  - XX = the original value of kilobytes
+  - YY = the calculated megabytes
+  - ZZ = the remaining kilobytes
+  - 1 MB = 1024KB
+
+### Approach:
+- Had validation check at the start of the method.
+- Created two variables to hold the results from converting kilobytes to megaBytes and remaining kilobytes.
+- Printed message, using the variable names
+
+### Observations
+- I could have passed the calculations straight into the `println()`. I chose to pass variables to make the println clearner by just printing a String.
 
 ### Solution
 `CodingExercise3.java`
-
-### Observations
-- Can pass the calculations straight into the `println`, but it leaves it unclear what the calculation
-represents
 
 --- 
 
 ## Coding Exercise 4: Developing A 'Barking Dog' Program
 
 ### Goal
-Write a method that determines if I should wake up. We should wake up if the dog is barking before 8 or after
-22.
+Write a method that determines if I should wake up. I need to wake up if the dog is barking before 8:00 or after 22:00.
 
 ### Requirements
+#### 1. shouldWakeUp(`boolean` barking, `int` hourOfDay)
+- Return Type: `boolean`
+- Validation check: 
+  - if `hourOfDay < 0` OR `hourOfDay > 23` &rarr; return false
+- Return true if dog is barking before 8:00 or after 22:00
+- Otherwise return false
 
-#### shouldWakeUp
-- 2 parameter: boolean barking, int hourOfDay
-- `return` a boolean
-- Validation check: if hourOfDay < 0 or hourOfDay > 23 `return` false
+### Approach
+- Chose to have validation check only check `hourOfDay < 0`
+- Chose to have a single line return statement
 
+### Key Observations
+- Since according to a 24-hour clock (0-23), I just need to check if `hourOfDay == 23`.
+- The `hourOfDay > 23` validation requiremnt will be met since I am checking `hourOfDay == 23`.
+- Could include validation check directly to the `return` statement, causing it to be one line.
+  - Decided against it due mixing logic.
 
 ### Solution
 `CodingExercise4.java`
-
-### Observations
-- For the validation check we only have to check if `hourOfDay < 0`.
-- Since according to a 24-hour clock it goes from 0-23, we actually just need to check in `hourOfDay < 8`
-  or `hourOfDay == 23`.
-- Program will automatically `return false` if the dog is not barking.
-- If `hourOfDay > 23` it will also `return false` since we are checking `hourOfDay == 23`.
-- Could include validation check directly to the `return` statement, causing it to be one line.
-  - Decide against it due to it being harder to read.
 
 --- 
 
 ## Coding Exercise 5: Implementing A Precise Leap Year Calculator
 
-### Goal
+### Goal:
 Write a method that determines whether a year is a leap year
 
-### Requirements
+### Requirements:
+#### 1. isLeapYear(`int` year)
+- Return Type: `boolean`
+- Validation check: 
+  - `year < 1` or `year > 9999` &rarr; return false;
+- Return if the year is a leap year. (See NOTES)
 
-#### isLeapYear
-- 1 parameter: int year
-- `return` a boolean
-- Validation check: year < 1 or year > 9999 `return false`
-
-
-### Solution
-`CodingExercise5.java`
-
-### Notes
+### Notes:
 To determine if a year is a leap year:
 1. If the year is evenly divisible by 4, go to step 2. Otherwise, go to step 5.
 2. If the year is evenly divisible by 100, go to step 3. Otherwise, go to step 4.
@@ -147,39 +147,43 @@ To determine if a year is a leap year:
 4. The year is a leap year (it has 366 days). The method isLeapYear needs to return true.
 5. The year is not a leap year (it has 365 days). The method isLeapYear needs to return false.
 
-### Observations
-- The basic solution requires multiple nested if statements.
-- I can cut down on number of if statements by combining checks such as `if (year % 4) && if (year % 100 == 0)`.
-  - I need to make adjustments due to a year being a leap year only if it's **not** divisible by 100.
-- After changing the original if statement, Intellij showed that we can simplify the `else if` chain 
-even further.
-  - After reviewing, I don't see the need for the `else` statement since `return year % 400 == 0` to
-end the method.
-  - I can simplify the entire `if` statement into a `return` statement. And unlike the above exercise, 
-we aren't mixing to validation checks and logic checks together, making it clearer to read.
+### Approach:
+- Put validation check at the top of the method.
+
+### Key Observations:
+- The basic solution requires multiple nested `if-statements`.
+- I can simplify the `if-statements` into a single return by only return everything that makes a year a leap year:
+  - year % 4 **equals** 0
+  - year % 100 **does not equal** 0
+  - year % 400 **equals** 0
+- The second bullet has conditions that are based on one another (i.e year % 4 and year % 100)
+
+### Solution
+`CodingExercise5.java`
 
 ---
 
 ## Coding Exercise 6: Building A Decimal Comparator
 
-### Goal
+### Goal:
 Write a method that returns true or false if two decimal numbers are the same up to three decimal places.
 
 ### Requirements
+#### 1. areEqualByThreeDecimalPlaces(`double` firstValue, `double` secondValue)
+- Return Type: `boolean`
+- Return true/false if the two numbers are the same up to the third decimal place.
 
-#### areEqualByThreeDecimalPlaces
-- Two parameters: double firstValue, double secondValue
-- `return` a boolean
+### Approach:
+- Used single return statement to return the result of comparing both parameters after multiplying them by 1,000 and `casting` to an int.
+
+### Key Observations:
+- I can't just check firstValue == secondValue since that will compare the entire value.
+- To compare up to three decimal places, I can multiply each number by 1,000, and `cast` the result
+  to an `int`, which will truncate the remaining decimal.
+- The comparison can be done cleanly in a single `return` statement.
 
 ### Solution
 `CodingExercise6.java`
-
-### Observations
-- I need to check if both numbers are the same up to three decimal places.
-  - I can't just check firstValue == secondValue since that will compare the entire value.
-- To compare up to three decimal places, I can multiply each number by 1,000, and `cast` the result 
-to an `int`, which will truncate the remaining decimal.
-- The comparison can be done cleanly in a single `return` statement.
 
 ---
 

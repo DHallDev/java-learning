@@ -4,9 +4,9 @@
 public class CodingExercise3 {
 
     public static void main(String[] args) {
-
-        printMegaBytesAndKiloBytes(-2500);
         printMegaBytesAndKiloBytes(2500);
+        printMegaBytesAndKiloBytes(-1024);
+        printMegaBytesAndKiloBytes(5000);
     }
 
     public static void printMegaBytesAndKiloBytes(int kiloBytes) {
@@ -15,10 +15,10 @@ public class CodingExercise3 {
             return;
         }
 
-        int megaBytes = kiloBytes / 1024;
+        int kiloBytesToMegaBytes = kiloBytes / 1024;
         int remainingKiloBytes = kiloBytes % 1024;
 
-        System.out.println(kiloBytes + " KB = " + megaBytes + " MB and " + remainingKiloBytes + " KB");
+        System.out.println(kiloBytes + " KB = " + kiloBytesToMegaBytes + " MB and " + remainingKiloBytes + " KB");
     }
 }
 

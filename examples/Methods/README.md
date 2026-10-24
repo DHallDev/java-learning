@@ -1,39 +1,40 @@
-## Methods Lesson
+# Methods Lesson
 This folder contains the example code used in Tim Buchalka’s *Java Programming Masterclass* lesson on **methods**.  
 The goal of this lesson is to understand how to declare methods, pass parameters, return values, and invoke methods from other parts of the program.
 This lesson also shows how the requirements to make an overloaded method and how it can be used in code.
 
 ---
 
-### 📘 Concepts Demonstrated
+## 📘 Concepts Demonstrated
 
-### Method Declaration
+### 1. Method Declaration
 - Declaring a method with a return type (`void`, `int`, etc.)
 - Adding parameters to the method header
 - Understanding the method signature (name + parameters)
 
-### Method Invocation
+### 2. Method Invocation
 - Calling methods from `main`
 - Passing arguments that match the parameter list
-- Using return values inside expressions or asssignments
+- Using return values inside expressions or assignments
 
-### Overloaded Method
+### 3. Overloaded Method
 - Declaring a method with the same name but different `method signature`
-- Invoking a method inside of another to cut down on duplication
+- Invoking a method inside another to cut down on duplication
 
-### Return Types
+### 4. Return Types
 - Returning computed values
 - Using `void` when no value is returned
 - Understanding how `return` transfers control back to the caller
 
-### Basic Conditional Logic
-- Simple `if` statements inside a method
+### 5. Basic Conditional Logic
+- Simple `if-then` statements inside a method
 - Using parameters as local variables
 
 ---
 
-### File Included
-#### MainChallenge.java
+## File Included
+
+### 1.MainChallenge.java
 Contains:
 - Updated code originally done from Tim's If-Conditionals lessons
 - A method that calculates a score using parameters

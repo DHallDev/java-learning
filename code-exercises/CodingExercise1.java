@@ -10,17 +10,13 @@ public class CodingExercise1 {
     }
 
     public static void checkNumber(int number) {
-
         if (number > 0) {
             System.out.println("positive");
             return;
-        }
-
-        if (number < 0) {
+        } else if (number < 0) {
             System.out.println("negative");
             return;
         }
-
         System.out.println("zero");
     }
 }

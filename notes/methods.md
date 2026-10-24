@@ -106,3 +106,4 @@ They can help with the following:
 - You can pass literal values or variable names as arguments. 
   - I should choose whichever version makes my code more readable.
 - The `return` statement is usually placed right before the closing brace of the method
+- While optional, the `return` can be used to terminate execution of a method early

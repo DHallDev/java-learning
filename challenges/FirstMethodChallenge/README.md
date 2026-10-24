@@ -27,4 +27,5 @@ Use the following scores:
 
 ## Notes:
 After doing the various coding exercises I learned about using a method to do calculations for another
-method, a `helper` method. After looking at this code snippet, I realized we can do the calculation 
+method, a `helper` method. After looking at this code snippet, I realized we can do the calculation inside of
+`displayHighScorePosition`.
