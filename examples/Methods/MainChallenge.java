@@ -19,12 +19,10 @@ public class MainChallenge {
 
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
         int finalScore = score;
-
         if (gameOver) {
             finalScore += (levelCompleted * bonus);
             finalScore += 1000;
         }
-
         return finalScore;
     }
 }

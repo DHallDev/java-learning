@@ -17,7 +17,6 @@ public class CodingExercise3 {
 
         int kiloBytesToMegaBytes = kiloBytes / 1024;
         int remainingKiloBytes = kiloBytes % 1024;
-
         System.out.println(kiloBytes + " KB = " + kiloBytesToMegaBytes + " MB and " + remainingKiloBytes + " KB");
     }
 }

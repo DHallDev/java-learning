@@ -1,9 +1,11 @@
 # Casting
+
 Casting is the process of converting one numeric data type into another.
 
 ---
 
 ## Rules & Mechanics:
+
 - Casting converts a value from one type to another
 - Some conversions happen **automatically** &rarr; widening
   - Order: `byte` &rarr; `short` &rarr; `int` &rarr; `long` &rarr; `float` &rarr; `double`
@@ -15,6 +17,7 @@ Casting is the process of converting one numeric data type into another.
 ---
 
 ## Why is this important:
+
 Allows my program to:
 - Mix different numeric data types
 - Perform calculations safely
@@ -26,15 +29,17 @@ This process is most commonly used when working with math expressions
 
 ---
 
-## Structures of Casting:
+## Examples:
 
 ### 1. Widening Casting (Automatic)
+
 Converts a smaller type into a larger type.
 
     int myInt = 10;  
     double myDouble = myInt;    // automatic widening
 
 ### 2. Narrowing Casting (Manual)
+
 Converts a larger type into a smaller type. Requires the use of `()`:
 
     double myDouble = 9.8;  
@@ -43,10 +48,12 @@ Converts a larger type into a smaller type. Requires the use of `()`:
 Result: `myInt = 9` (the decimal is truncated)
 
 ### 3. Casting in Expressions
+
 The complier treats **constant expressions** differently from **variable expressions**. Basically Java can evaluate math if you use literal values, but gets
 confused when you replace them with variables instead:
 
 #### Constant Expression (OK)
+
     byte x = 10 / 2;    // OK (complier knows the result is 5)
 
 #### Variable Expressions (ERROR)
@@ -55,9 +62,11 @@ confused when you replace them with variables instead:
     byte b = a / 2;    // ERROR (must cast)  
 
 #### Fix:  
+
     byte b = (byte) (a / 2);
 
 ### 4. Casting with Characters
+
 `char` can be cast to and from numeric data types.
 
     char letter = 'A';  
@@ -67,6 +76,7 @@ confused when you replace them with variables instead:
 ---
 
 ## Common Mistakes:
+
 - Forgetting to cast during narrowing
 - Assuming casting **rounds** values (it **truncates**)
 - Casting incompatible types
@@ -77,6 +87,7 @@ confused when you replace them with variables instead:
 ---
 
 ## Summary:
+
 Casting converts values between compatible types.  
 - **widening** &rarr; safe, automatic
 - **narrowing** &rarr; risky, manual  
@@ -88,6 +99,7 @@ Essential for:
 - Avoiding compiler errors
 
 ## Side-Notes:
+
 - Narrowing can cause overflow or underflow
 - Casting does not modify the original variable
 - Integer division always truncates

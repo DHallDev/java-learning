@@ -1,4 +1,5 @@
 # Coding Exercises
+
 This repository contains my implementations of foundational Java exercises. Each exercise includes a concise problem summary, my approach, key observations,
 and the final solution file. The goal is to demonstrate clear reasoning, clean code, and consistent problem‑solving practices as I build my 
 Java fundamentals.
@@ -9,24 +10,30 @@ Java fundamentals.
 # Coding Exercise 1: Positive, Negative, Or Zero Assessment
 
 ## Goal
+
 Implement a method that prints whether a given integer is positive, negative or zero.
 
 ## Requirements:
+
 ### 1. Method checkNumber(int number)
+
 - Return Type: `void`
 - if number > 0 &rarr; Print `positive`
 - if number < 0 &rarr; Print `negative`
 - if number = 0 &rarr; Print `zero`
 
 ## Approach:
+
 - Avoided nested ternaries for readability.
 - No else used due to `if-statements` printing and exiting early.
 
 ## Key Observations:
+
 - Early returns prevent fall-through to code below
 - While concise, nested ternaries reduce readability
 
 ## Solution.File
+
 `CodingExercise1.java`
 
 ---
@@ -34,11 +41,14 @@ Implement a method that prints whether a given integer is positive, negative or 
 # Coding Exercise 2: Implementing A Speed Converter
 
 ## Goal
+
 Implement two methods: `toMilesPerHour` to calculates kilometers per hour to miles per hour rounded, and `printConversion` that prints out that 
 conversion.
 
 ## Requirements
+
 ### 1. printConversion()
+
   - Return Type: `void`
   - Validation check:
     - if kilometersPerHour < 0 &rarr; Print "Invalid Value".
@@ -46,7 +56,9 @@ conversion.
   - Prints the message **XX km/h = YY mi/h**:
     - **XX** is the `kilometersPerHour`.
     - **YY** is the `milesPerHour`.
+
 ### 2. toMilesPerHour(double kilometersPerHour)
+
   - Return Type: `long`
   - Validation Check: 
     - if kilometersPerHour < 0 &rarr; return -1
@@ -55,16 +67,19 @@ conversion.
     - 1 mile is 1.609 kilometers.
 
 ## Approach
+
 - Validate inputs in `if` statements and early `return`.
 - Avoided ternary for readability.
 - Return the result directly from `Math.round()` calculation.
 
 ## Key Observations
+
 - Returning calucation and validation as a ternary mixes logic impacting readability.
 - Using helper methods help reduce duplication and improves readability.
 - Better to not put calculation/method invocation directly into `println()` to keep it clean
 
 ## Solution File
+
 `CodingExercise2.java`
 
 ---
@@ -72,10 +87,13 @@ conversion.
 ## Coding Exercise 3: Accurate Megabytes Converter
 
 ### Goal:
+
 Write a method that takes in kilobytes and calculates the total megabytes and remaining kilobytes, and then prints it out in a message.
 
 ### Requirements:
+
 #### 1. printMegaBytesAndKiloBytes(`int` kiloBytes)
+
 - Return Type: `void`
 - Validation check: 
   - if kiloBytes < 0 &rarr; print "Invalid Value"
@@ -87,14 +105,17 @@ Write a method that takes in kilobytes and calculates the total megabytes and re
   - 1 MB = 1024KB
 
 ### Approach:
+
 - Had validation check at the start of the method.
 - Created two variables to hold the results from converting kilobytes to megaBytes and remaining kilobytes.
 - Printed message, using the variable names
 
 ### Observations
+
 - I could have passed the calculations straight into the `println()`. I chose to pass variables to make the println clearner by just printing a String.
 
 ### Solution
+
 `CodingExercise3.java`
 
 --- 
@@ -102,10 +123,13 @@ Write a method that takes in kilobytes and calculates the total megabytes and re
 ## Coding Exercise 4: Developing A 'Barking Dog' Program
 
 ### Goal
+
 Write a method that determines if I should wake up. I need to wake up if the dog is barking before 8:00 or after 22:00.
 
 ### Requirements
+
 #### 1. shouldWakeUp(`boolean` barking, `int` hourOfDay)
+
 - Return Type: `boolean`
 - Validation check: 
   - if `hourOfDay < 0` OR `hourOfDay > 23` &rarr; return false
@@ -113,16 +137,19 @@ Write a method that determines if I should wake up. I need to wake up if the dog
 - Otherwise return false
 
 ### Approach
+
 - Chose to have validation check only check `hourOfDay < 0`
 - Chose to have a single line return statement
 
 ### Key Observations
+
 - Since according to a 24-hour clock (0-23), I just need to check if `hourOfDay == 23`.
 - The `hourOfDay > 23` validation requiremnt will be met since I am checking `hourOfDay == 23`.
 - Could include validation check directly to the `return` statement, causing it to be one line.
   - Decided against it due mixing logic.
 
 ### Solution
+
 `CodingExercise4.java`
 
 --- 
@@ -130,16 +157,20 @@ Write a method that determines if I should wake up. I need to wake up if the dog
 ## Coding Exercise 5: Implementing A Precise Leap Year Calculator
 
 ### Goal:
+
 Write a method that determines whether a year is a leap year
 
 ### Requirements:
+
 #### 1. isLeapYear(`int` year)
+
 - Return Type: `boolean`
 - Validation check: 
   - `year < 1` or `year > 9999` &rarr; return false;
 - Return if the year is a leap year. (See NOTES)
 
 ### Notes:
+
 To determine if a year is a leap year:
 1. If the year is evenly divisible by 4, go to step 2. Otherwise, go to step 5.
 2. If the year is evenly divisible by 100, go to step 3. Otherwise, go to step 4.
@@ -151,6 +182,7 @@ To determine if a year is a leap year:
 - Put validation check at the top of the method.
 
 ### Key Observations:
+
 - The basic solution requires multiple nested `if-statements`.
 - I can simplify the `if-statements` into a single return by only return everything that makes a year a leap year:
   - year % 4 **equals** 0
@@ -159,6 +191,7 @@ To determine if a year is a leap year:
 - The second bullet has conditions that are based on one another (i.e year % 4 and year % 100)
 
 ### Solution
+
 `CodingExercise5.java`
 
 ---
@@ -166,14 +199,18 @@ To determine if a year is a leap year:
 ## Coding Exercise 6: Building A Decimal Comparator
 
 ### Goal:
+
 Write a method that returns true or false if two decimal numbers are the same up to three decimal places.
 
 ### Requirements
+
 #### 1. areEqualByThreeDecimalPlaces(`double` firstValue, `double` secondValue)
+
 - Return Type: `boolean`
 - Return true/false if the two numbers are the same up to the third decimal place.
 
 ### Approach:
+
 - Used single return statement to return the result of comparing both parameters after multiplying them by 1,000 and `casting` to an int.
 
 ### Key Observations:
@@ -183,83 +220,110 @@ Write a method that returns true or false if two decimal numbers are the same up
 - The comparison can be done cleanly in a single `return` statement.
 
 ### Solution
+
 `CodingExercise6.java`
 
 ---
 
 ## Coding Exercise 7: Creating An Equal Sum Checker
 
-### Goal
+### Goal:
+
 Write a method that returns true or false if the sum of the first two number equal the third.
 
-### Requirements
+### Requirements:
 
-#### hasEqualSum
-- Three parameters: int firstValue, int secondValue, int goal
-- `return` a boolean
+#### 1. hasEqualSum(`int` firstValue, `int` secondValue, `int goal)
 
-### Solution
+- Return Type: `boolean`
+- Return true if the sum of firstValue & secondValue is the same
+
+### Approach:
+
+- Used a single return statement to return the comparison
+
+### Key Observations:
+
+- No observations
+
+### Solution:
+
 `CodingExercise7.java`
-
-### Observations
-- No observations: Rather clear just check if the value of `(firstValue + secondValue)` == `goal`.
-  - Can all be done in a single return statement.
 
 ---
 
 ## Coding Exercise 8: Devising A Teen Number Checker
 
 ### Goal
-Create a method that checks if there is a teen (between 13-19 inclusively) out of three numbers. Create
-another method that checks if a single number is between 13-19 inclusively.
+
+Create a method that checks if there is a teen (between 13-19 inclusively) out of three numbers. Create another method that checks if a single number is between 13-19 inclusively.
 
 ### Requirements
 
-#### hasTeen
-- 3 parameters: int firstAge, int secondAge, int thirdAge
-- `return` a boolean
+#### 1. hasTeen(`int` firstAge, `int` secondAge, `int` thirdAge)
 
-#### isTeen
-- 1 parameters: int age
-- `return` a boolean
+- Return Type: `boolean`
+- Use isTeen() to determine if any of the ages are teens
+
+#### 2.  isTeen(`int` age)
+
+- Return Type: `boolean`
+- Return if the age is between 13-19 inclusively
+
+### Approach:
+
+- For `isTeen()`, passed the check in one `return` statement.
+- For `hasTeen()` passed the check in one `return` statement, using `isTeen()` as a helper
+
+### Key Observations:
+
+- Noticed when I am solving exercises containing 2 methods, a lot of the time a method takes information from the other, allowing me to cut out a lot of duplicate code.
+  - After looking up, a method that helps break down a complex task, handle repetitive logic, or manage a specific piece of a larger calculation is called a `helper method`.
 
 ### Solution
-`CodingExercise8.java`
 
-### Observations
-- For `isTeen` I can just pass the check as one `return` statement.
-- Instead of writing the same code that was inside `isTeen` inside `hasTeen` for each age we can just
-pass each age as an argument to `isTeen`
-- Noticed when I am solving exercises containing 2 methods, a lot of the time a method takes information
-from the other, allowing me to cut out a lot of duplicate code.
-  - After looking up, a method that helps break down a complex task, handle repetitive logic, or manage
-  a specific piece of a larger calculation is called a `helper method`.
+`CodingExercise8.java`
 
 ---
 
 ## Coding Exercise 9: A Comprehensive Area Calculator
 
 ### Goal
-Write 2 method both named area. One calculates the area of a circle, the othe calculates the area of
-a rectangle.
+
+Write 2 method both named area. One calculates the area of a circle, the othe calculates the area of a rectangle.
 
 ### Requirements
 
-#### area (circle)
-- 1 parameter: double radius
-- `return` the value after finding the area of a circle
-- Validation: `return` -1.0 if the parameters is negative to represent an invalid value
+#### 1. area(`double` radius)
 
-#### area (rectangle)
-- 2 parameters: double x, double y
-- `return` the value after finding the area of a rectangle
-- Validation: `return` if either or both of the parameters are negative
+- Return Type: `double`
+- Validation Check: 
+  - radius < 0 &rarr; return -1
+- Return the area of a circle
+
+
+#### 2. area(`double` x, `double` y)
+
+- Return Type: `double`
+- Validation Check: 
+  - x < 0 OR y < 0 &rarr; return -1
+- Return the area of a rectangle
+
+
+### Approach: 
+
+- First `area()`
+  - I combined the check with the calculation, It mixes the validation with the actual work but since it read as a simple `if-else statement` I thought it read better this way.
+  - I used the built-in Java method `Math.pow()` to get the exponent of a value.
+  - I used the built-in Java method `Math.PI` to get the value of pi.
+- Second `area()`
+  - Same as first `area()`, combined the validation with actual work
+  - Returned the value of multiplying x and y directly.
 
 ### Observations
-- For the first `area` we can you use the built-in Java method `Math.pow()` to get the exponent of a
-value
-- Requirements for the second `area` states "if either or both" but I can check if either value is negative
-to get the same outcome.
+
+I was very adamant that I was not going to mix validation with the return value. But after contemplating it, I believe it would read better to do it for simple guard clauses that read basically as a simple `if-else 
+statement`.
 
 ---
 

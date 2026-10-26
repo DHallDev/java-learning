@@ -4,7 +4,6 @@
 public class MethodChallenge {
 
     public static void main(String[] args) {
-
 //        First Approach of solving the challenge:
         int highScorePosition = calculateHighScorePosition(1500);
         displayHighScorePosition("Tim", highScorePosition);
@@ -37,14 +36,12 @@ public class MethodChallenge {
     }
 
     public static void displayHighScore(String playerName, int playerScore) {
-
         int playerHighScorePosition = calculateHighScorePosition(playerScore);
         System.out.println(playerName + " managed to get into position " + playerHighScorePosition +
                 " on the high score list!");
     }
 
     public static int calculateHighScorePosition(int playerScore) {
-
         int position = 4;
         if (playerScore >= 1000) {
             position = 1;
@@ -53,7 +50,6 @@ public class MethodChallenge {
         } else if (playerScore >= 100) {
             position = 3;
         }
-
         return position;
     }
 }

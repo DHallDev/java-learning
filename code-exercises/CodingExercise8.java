@@ -4,6 +4,7 @@
 public class CodingExercise8 {
 
     public static void main(String[] args) {
+        // First method test
         boolean hasTeenMethodTest1 = hasTeen(9, 99, 19);    // true
         boolean hasTeenMethodTest2 = hasTeen(23,15,42);    // true
         boolean hasTeenMethodTest3 = hasTeen(22, 23, 34);    // false
@@ -12,6 +13,7 @@ public class CodingExercise8 {
         System.out.println("hasTeenMethodTest2: " + hasTeenMethodTest2);
         System.out.println("hasTeenMethodTest3: " + hasTeenMethodTest3);
 
+        // Second method test
         boolean isTeenMethodTest1 = isTeen(9);    // false
         boolean isTeenMethodTest2 = isTeen(13);    // true;
 

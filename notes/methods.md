@@ -1,9 +1,11 @@
 # Methods
+
 A **method** declares executable code that cane be "invoked", passing a fixed number of values as arguments.
 
 ---
 
 ## Rules & Mechanics
+
 - You must declare a return type (`void`, `int`, `String`, etc.) when doing the **method signature**
   - The **method signature** is the method name + parameter list
   - A `return` statement returns control to the invoker
@@ -17,11 +19,12 @@ A **method** declares executable code that cane be "invoked", passing a fixed nu
 - The `static` keyword means that the method belongs ot the class, not an object
 
 You can have multiple methods with the same name, though they must have different parameters. These are
-called `Overloaded Methods`.
+called `method overloading`.
 
 ---
 
 ## Why Is This Important
+
 Methods allow my program to:
 - Reduce code duplication
 - Organize logic
@@ -31,9 +34,9 @@ Methods allow my program to:
 
 ---
 
-## Example
+## Examples
 
-### No Parameters method
+### 1. No Parameters method
     public static void calculateScore() {
     }  
 
@@ -41,7 +44,8 @@ To Invoke:
 
     calculateScore();
 
-### Method With Parameters
+### 2. Method With Parameters
+
 When you want your method to do something based on information provided by your file:
 
     public static void calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
@@ -59,7 +63,8 @@ To Invoke:
 
     calculateScore(true, 800, 5, 100);
 
-### Method With A Return Type
+### 3. Method With A Return Type
+
 When you want your method to do calculations and return the result of that calculation back to the main file:
 
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
@@ -79,9 +84,28 @@ To Invoke:
     int highScore = calculateScore(gameOver, score, levelCompleted, bonus);
     System.out.println("The highScore is " + highScore + ".");
 
+### 4. Overloaded Methods:
+
+Multiple methods with the same name, but different parameters.
+
+    public static void doSomething(int p1) {
+        // method body
+    }
+
+    public statc void doSomething(float p1) {
+        // method body
+    }
+
+    public statc void doSomething(int p1, float p2) {
+        // method body
+    }
+
+
+
 ---
 
 ## Common Mistakes
+
 - Forgetting to return a value when the return type is not `void`.
 - Return the wrong data type
 - Mismatching argument types or order when calling a method.
@@ -91,6 +115,7 @@ To Invoke:
 ---
 
 ## Summary
+
 Methods are reusable blocks of code that performs a specific task.  
 It can take inputs (called parameters).
 They can help with the following:  
@@ -101,6 +126,7 @@ They can help with the following:
 - Makes my code readable and maintainable
 
 ## Side-Notes
+
 - Parameters are shown in the method declaration, and arguments will be the value that's passed to the method.
 - When parameters are declared, you don't have to "redeclare" the variables inside the method.
 - You can pass literal values or variable names as arguments. 
