@@ -16,11 +16,10 @@ public class CodingExercise10 {
             return;
         }
 
-        long hours = minutes / 60L;
-        long days = hours / 24L;
-        long years = days / 365L;
-        long remainingDays = days % 365L;
-
+        long hours = minutes / 60;
+        long days = hours / 24;
+        long years = days / 365;
+        long remainingDays = days % 365;
         System.out.println(minutes + " min = " + years + " y and " + remainingDays + " d");
     }
 }

@@ -10,20 +10,18 @@ public class CodingExercise11 {
         printEqual(1, 2, 3);
     }
 
-    public static void printEqual(int numOne, int numTwo, int numThree) {
-        if (numOne < 0 || numTwo < 0 || numThree < 0) {
+    public static void printEqual(int num1, int num2, int num3) {
+        if (num1 < 0 || num2 < 0 || num3 < 0) {
             System.out.println("Invalid Value");
             return;
         }
 
-        if (numOne == numTwo && numTwo == numThree) {
+        if (num1 == num2 && num1 == num3) {
             System.out.println("All numbers are equal");
-            return;
-        } else if (numOne != numTwo && numOne != numThree && numTwo != numThree) {
+        } else if ((num1 != num2 && num1 != num3) && num2 != num3) {
             System.out.println("All numbers are different");
-            return;
+        } else {
+            System.out.println("Neither all are equal or different");
         }
-
-        System.out.println("Neither all are equal or different");
     }
 }

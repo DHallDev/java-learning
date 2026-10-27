@@ -330,47 +330,64 @@ statement`.
 ## Coding Exercise 10: A Minutes-To-Years-And-Days Calculator
 
 ### Goal
+
 Given a set number of minutes calculate the years and days then print them out.
 
-### Requirements
+### Requirements:
 
-#### printYearsAndDays
-- 1 parameter: long minutes
-- `void`
-- Validation: print `Invalid Value` if parameter is less than 0
-- Format: "`XX` min = `YY` y and `ZZ` d"
+#### 1. printYearsAndDays(`long` minutes)
+
+- Return Type: `void`
+- Validation Check: 
+  - Minutes < 0 &rarr; print `Invalid Value`
+- Print "`XX` min = `YY` y and `ZZ` d"
   - `XX` = original value of minutes
   - `YY` = calculated years
   - `ZZ` = calculated days
 
-### Observations
-- Whenever I'm tasked with the result being printed out. the method always seems the `return` type of
-`void`
+### Approach:
+
+- Had validation check at the top of the method.
+- Calcualted the total hours, days, years, and remaining days from the parameter.
+- Printed format using the calculated values.
+
+### Key Observations:
+
+- Whenever I'm tasked with the result being printed out. the method always seems the return type of`void`
 - Kept calculations as `long` to keep it simple
-- To calculate `remainingDays` you have to find the remainder of days after determining how many years
-can be made.
+- Could have placed the validation check inside the `println()` with the format as a ternary, but with all the `()` and other symbols for the ternary it appeared cluttered.
 
 ---
 
 ## Coding Exercise 11: An Equality Printer
 
 ### Goal
-When given 3 numbers, determine if all numbers all the same, they are all different, or Neither are
-equal or different.
+
+When given 3 numbers, determine if all numbers all the same, they are all different, or Neither are equal or different.
 
 ### Requirements
 
-#### printEqual
-- 3 parameters: int numValue1, int numValue2, int numValue3
-- `void`
-- Validation: If any number is less than 0: print "Invalid Value"
-- All numbers are equal example: 1, 1, 1
-- All number are different example: 1, 2, 3
-- Neither all are equal or different example: 1, 1, 2
+#### printEqual(`int` num1, `int` num2, `int` num3)
 
+- Return Type: `void`
+- Validation Check: 
+  - num1 < 0 OR num2 < 0 OR num3 < 0 &rarr; Print "Invalid Value"
+- Print All numbers are equal 
+  - example: 1, 1, 1
+- Print All number are different 
+  - example: 1, 2, 3
+- Print Neither all are equal or different 
+  - example: 1, 1, 2
+
+### Approach:
+
+- Added validation check at top of method.
+- Used `if-else if statements` to print the message
+- 
 ### Observations
-- I don't know if there is a way to reduce the checking the same number over again in `else-if` without
-creating a nested `if`
+
+- Original had the `return` keyword to cut out the `else` block, but it didn't seem to cut down on code
+- Originally had the variable names as "firstValue" etc. but it was long to type, and I felt that "num1" conveyed the same meaning as "firstValue".
 
 ---
 
