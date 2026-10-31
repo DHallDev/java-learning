@@ -16,7 +16,7 @@ public class CodingExercise13 {
     }
 
     public static void printNumberInWord(int number) {
-        String word = switch (number) {
+        String numberInWord = switch (number) {
             case 0 -> "ZERO";
             case 1 -> "ONE";
             case 2 -> "TWO";
@@ -29,7 +29,6 @@ public class CodingExercise13 {
             case 9 -> "NINE";
             default -> "OTHER";
         };
-
-        System.out.println(word);
+        System.out.println(numberInWord);
     }
 }

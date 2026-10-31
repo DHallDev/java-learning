@@ -1,4 +1,5 @@
 # Loops
+
 A loop is a control-flow structure  that repeats blocks of code while a condition is true or until a specific endpoint is reached. There are **three main loop types**:
 - **for loops** &rarr; repeats a certain number of times.
 - **while loops** &rarr; repeat while a condition is true
@@ -7,6 +8,7 @@ A loop is a control-flow structure  that repeats blocks of code while a conditio
 ---
 
 ## Rules & Mechanics
+
 - Loops repeat code automatically
 - All loops rely on **boolean expressions**
 - Loops must eventually reach an end condition
@@ -17,6 +19,7 @@ A loop is a control-flow structure  that repeats blocks of code while a conditio
 ---
 
 ## Why Is This Important
+
 Loops allow my program to:
 - automate repetitive task
 - process data efficiently
@@ -31,9 +34,11 @@ Without loops, repeated logic would require manually writing the same code multi
 ## Structure
 
 ### 1. For Loops
+
 A **for loop** repeats code a specific number of times.
 
 #### Rules & Mechanics
+
 - Designed for **counted iteration**
 - Has three parts:
   - **initialization** &rarr; sets the starting value
@@ -64,9 +69,11 @@ A **for loop** repeats code a specific number of times.
     Count: 4
 
 ### 2. While Loops
+
 A **while loop** repeats **as long as** a condition is true.
 
 #### Rules & Mechanics
+
 - Condition is checked **before** the loops runs
 - Loop may run **zero times** if the condition is false
 - Best for situations where I **don't know** how  many times the loop will run
@@ -95,9 +102,11 @@ A **while loop** repeats **as long as** a condition is true.
     70...
 
 ### 3. Do-While Loops
+
 A **do-while loop** guarantees the code runs **at least once**.
 
 #### Rules & Mechanics
+
 - Condition is checked **after** the loops runs
 - Always executes the body once
 - Useful for:
@@ -130,6 +139,7 @@ A **do-while loop** guarantees the code runs **at least once**.
 ---
 
 ## Common Mistakes
+
 - Forgetting to update the loop variable (infinite loop)
 - Writing a condition that never becomes false
 - Modifying the loop counter inside the loop body
@@ -139,6 +149,7 @@ A **do-while loop** guarantees the code runs **at least once**.
 ---
 
 ## Summary
+
 Loops allows Java to repeat code automatically. Essential for:
 - Iteration
 - Automation
@@ -147,6 +158,7 @@ Loops allows Java to repeat code automatically. Essential for:
 - data process
 
 ## Side-note:
+
 - The loop variable for a `for` loop is often named `i` (iteration variable)
 - Infinite loops can be intentional
 - Boolean expressions control every loop

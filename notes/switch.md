@@ -2,8 +2,11 @@
 
 A basic control-flow structure that selects one path of execution based on the value of a single expression.
 
+---
+
 ## Rules & Mechanics
-- Evaluates **one expression** once
+
+- Evaluates **one expression**
 - Compares that single expression against **specific values**
 - `break` keyword is used to prevent fall-through
 - `default` is ran when no case matches (like an `else`)
@@ -17,22 +20,28 @@ A basic control-flow structure that selects one path of execution based on the v
 - Modern switch expressions (Java 14+) allows me to return values directly (like how we'd done with methods)
 - Cases must be constant values (no ranges, no boolean)
 
+---
+
 ## Why Is This Important
-- Simplifies long `else-if` chains
+
+- Simplifies long `if-else` statements
 - Makes branching logic easier to read
 - Group related cases together
 - Reduce repeated comparisons
 - Improves clarity when checking values
 - Supports modern, cleaner syntax with arrow expressions
+
 Switch statements basically helps cut out on seeing `if (x == value)` everywhere
 
-## Structure Of A Switch Statement
+---
 
-### Traditional Switch
+## Examples Of A Switch Statement
+
+### 1. Traditional Switch
+
 This is the traditional switch statement, before Java 14
 
     int switchValue = 3;
-
     switch (switchValue) {
       case 1:
         System.out.println("Value was 1");
@@ -48,7 +57,6 @@ This is the traditional switch statement, before Java 14
 You can chain cases like this:
 
     int switchValue = 3;
-
     switch (switchValue) {
       case 1:
         System.out.println("Value was 1");
@@ -65,7 +73,8 @@ You can chain cases like this:
       break;
     }
 
-### Enhanced Switch
+### 2. Enhanced Switch
+
 After Java 14, the `switch` statement has been modified to help prevent fall-through. Any corporation
 that any Java version 14 or after can have their `switch` statements written in this way.
 
@@ -76,14 +85,21 @@ that any Java version 14 or after can have their `switch` statements written in 
         case 'D' -> 0;
     };
 
+---
+
 ## Common Mistakes
+
 - Forgetting the `break` keyword, causing unintended fall-through
 - Using switch for **ranges**
 - Not including a `default` case
 - Using complex boolean logic inside case labels
 - Switching on types not supported (e.g., `boolean`, `float`, `double`)
+- trying to use the `return` keyword instead of `yield` when trying to return a value from a switch expression code block.
+
+---
 
 ## Summary
+
 Switch statements provide a clean way to compare one value against multiple discrete options. They improve readability, reduce repetitive comparisons.
 By understanding the `switch` statement, I can avoid super complex `else-if` chains.
 

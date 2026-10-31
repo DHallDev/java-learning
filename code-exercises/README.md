@@ -74,7 +74,7 @@ conversion.
 
 ## Key Observations
 
-- Returning calucation and validation as a ternary mixes logic impacting readability.
+- Returning calculation and validation as a ternary mixes logic impacting readability.
 - Using helper methods help reduce duplication and improves readability.
 - Better to not put calculation/method invocation directly into `println()` to keep it clean
 
@@ -84,15 +84,15 @@ conversion.
 
 ---
 
-## Coding Exercise 3: Accurate Megabytes Converter
+# Coding Exercise 3: Accurate Megabytes Converter
 
-### Goal:
+## Goal:
 
 Write a method that takes in kilobytes and calculates the total megabytes and remaining kilobytes, and then prints it out in a message.
 
-### Requirements:
+## Requirements:
 
-#### 1. printMegaBytesAndKiloBytes(`int` kiloBytes)
+### 1. printMegaBytesAndKiloBytes(`int` kiloBytes)
 
 - Return Type: `void`
 - Validation check: 
@@ -104,65 +104,64 @@ Write a method that takes in kilobytes and calculates the total megabytes and re
   - ZZ = the remaining kilobytes
   - 1 MB = 1024KB
 
-### Approach:
+## Approach:
 
 - Had validation check at the start of the method.
 - Created two variables to hold the results from converting kilobytes to megaBytes and remaining kilobytes.
 - Printed message, using the variable names
 
-### Observations
+## Observations
 
-- I could have passed the calculations straight into the `println()`. I chose to pass variables to make the println clearner by just printing a String.
+- I could have passed the calculations straight into the `println()`. I chose to pass variables to make the println cleaner by just printing a String.
 
-### Solution
+## Solution
 
 `CodingExercise3.java`
 
 --- 
 
-## Coding Exercise 4: Developing A 'Barking Dog' Program
+# Coding Exercise 4: Developing A 'Barking Dog' Program
 
-### Goal
+## Goal
 
 Write a method that determines if I should wake up. I need to wake up if the dog is barking before 8:00 or after 22:00.
 
-### Requirements
+## Requirements
 
-#### 1. shouldWakeUp(`boolean` barking, `int` hourOfDay)
+### 1. shouldWakeUp(`boolean` barking, `int` hourOfDay)
 
 - Return Type: `boolean`
 - Validation check: 
   - if `hourOfDay < 0` OR `hourOfDay > 23` &rarr; return false
-- Return true if dog is barking before 8:00 or after 22:00
-- Otherwise return false
+- Return true/false if dog is barking before 8:00 or after 22:00
 
-### Approach
+## Approach
 
 - Chose to have validation check only check `hourOfDay < 0`
 - Chose to have a single line return statement
 
-### Key Observations
+## Key Observations
 
 - Since according to a 24-hour clock (0-23), I just need to check if `hourOfDay == 23`.
-- The `hourOfDay > 23` validation requiremnt will be met since I am checking `hourOfDay == 23`.
+- The `hourOfDay > 23` validation requirement will be met since I am checking `hourOfDay == 23`.
 - Could include validation check directly to the `return` statement, causing it to be one line.
   - Decided against it due mixing logic.
 
-### Solution
+## Solution
 
 `CodingExercise4.java`
 
 --- 
 
-## Coding Exercise 5: Implementing A Precise Leap Year Calculator
+# Coding Exercise 5: Implementing A Precise Leap Year Calculator
 
-### Goal:
+## Goal:
 
 Write a method that determines whether a year is a leap year
 
-### Requirements:
+## Requirements:
 
-#### 1. isLeapYear(`int` year)
+### 1. isLeapYear(`int` year)
 
 - Return Type: `boolean`
 - Validation check: 
@@ -178,123 +177,124 @@ To determine if a year is a leap year:
 4. The year is a leap year (it has 366 days). The method isLeapYear needs to return true.
 5. The year is not a leap year (it has 365 days). The method isLeapYear needs to return false.
 
-### Approach:
+## Approach:
 - Put validation check at the top of the method.
 
-### Key Observations:
+## Key Observations:
 
 - The basic solution requires multiple nested `if-statements`.
 - I can simplify the `if-statements` into a single return by only return everything that makes a year a leap year:
   - year % 4 **equals** 0
   - year % 100 **does not equal** 0
   - year % 400 **equals** 0
-- The second bullet has conditions that are based on one another (i.e year % 4 and year % 100)
+- The second bullet has conditions that are based on one another (i.e. year % 4 and year % 100)
 
-### Solution
+## Solution
 
 `CodingExercise5.java`
 
 ---
 
-## Coding Exercise 6: Building A Decimal Comparator
+# Coding Exercise 6: Building A Decimal Comparator
 
-### Goal:
+## Goal:
 
 Write a method that returns true or false if two decimal numbers are the same up to three decimal places.
 
-### Requirements
+## Requirements
 
-#### 1. areEqualByThreeDecimalPlaces(`double` firstValue, `double` secondValue)
+### 1. areEqualByThreeDecimalPlaces(`double` firstValue, `double` secondValue)
 
 - Return Type: `boolean`
 - Return true/false if the two numbers are the same up to the third decimal place.
 
-### Approach:
+## Approach:
 
 - Used single return statement to return the result of comparing both parameters after multiplying them by 1,000 and `casting` to an int.
 
-### Key Observations:
+## Key Observations:
+
 - I can't just check firstValue == secondValue since that will compare the entire value.
 - To compare up to three decimal places, I can multiply each number by 1,000, and `cast` the result
   to an `int`, which will truncate the remaining decimal.
 - The comparison can be done cleanly in a single `return` statement.
 
-### Solution
+## Solution
 
 `CodingExercise6.java`
 
 ---
 
-## Coding Exercise 7: Creating An Equal Sum Checker
+# Coding Exercise 7: Creating An Equal Sum Checker
 
-### Goal:
+## Goal:
 
 Write a method that returns true or false if the sum of the first two number equal the third.
 
-### Requirements:
+## Requirements:
 
-#### 1. hasEqualSum(`int` firstValue, `int` secondValue, `int goal)
+### 1. hasEqualSum(`int` firstValue, `int` secondValue, `int goal)
 
 - Return Type: `boolean`
 - Return true if the sum of firstValue & secondValue is the same
 
-### Approach:
+## Approach:
 
 - Used a single return statement to return the comparison
 
-### Key Observations:
+## Key Observations:
 
 - No observations
 
-### Solution:
+## Solution:
 
 `CodingExercise7.java`
 
 ---
 
-## Coding Exercise 8: Devising A Teen Number Checker
+# Coding Exercise 8: Devising A Teen Number Checker
 
-### Goal
+## Goal
 
 Create a method that checks if there is a teen (between 13-19 inclusively) out of three numbers. Create another method that checks if a single number is between 13-19 inclusively.
 
-### Requirements
+## Requirements
 
-#### 1. hasTeen(`int` firstAge, `int` secondAge, `int` thirdAge)
+### 1. hasTeen(`int` firstAge, `int` secondAge, `int` thirdAge)
 
 - Return Type: `boolean`
 - Use isTeen() to determine if any of the ages are teens
 
-#### 2.  isTeen(`int` age)
+### 2.  isTeen(`int` age)
 
 - Return Type: `boolean`
 - Return if the age is between 13-19 inclusively
 
-### Approach:
+## Approach:
 
 - For `isTeen()`, passed the check in one `return` statement.
 - For `hasTeen()` passed the check in one `return` statement, using `isTeen()` as a helper
 
-### Key Observations:
+## Key Observations:
 
 - Noticed when I am solving exercises containing 2 methods, a lot of the time a method takes information from the other, allowing me to cut out a lot of duplicate code.
   - After looking up, a method that helps break down a complex task, handle repetitive logic, or manage a specific piece of a larger calculation is called a `helper method`.
 
-### Solution
+## Solution
 
 `CodingExercise8.java`
 
 ---
 
-## Coding Exercise 9: A Comprehensive Area Calculator
+# Coding Exercise 9: A Comprehensive Area Calculator
 
-### Goal
+## Goal
 
-Write 2 method both named area. One calculates the area of a circle, the othe calculates the area of a rectangle.
+Write 2 method both named area. One calculates the area of a circle, the other calculates the area of a rectangle.
 
-### Requirements
+## Requirements
 
-#### 1. area(`double` radius)
+### 1. area(`double` radius)
 
 - Return Type: `double`
 - Validation Check: 
@@ -302,7 +302,7 @@ Write 2 method both named area. One calculates the area of a circle, the othe ca
 - Return the area of a circle
 
 
-#### 2. area(`double` x, `double` y)
+### 2. area(`double` x, `double` y)
 
 - Return Type: `double`
 - Validation Check: 
@@ -310,7 +310,7 @@ Write 2 method both named area. One calculates the area of a circle, the othe ca
 - Return the area of a rectangle
 
 
-### Approach: 
+## Approach: 
 
 - First `area()`
   - I combined the check with the calculation, It mixes the validation with the actual work but since it read as a simple `if-else statement` I thought it read better this way.
@@ -320,22 +320,26 @@ Write 2 method both named area. One calculates the area of a circle, the othe ca
   - Same as first `area()`, combined the validation with actual work
   - Returned the value of multiplying x and y directly.
 
-### Observations
+## Key Observations
 
 I was very adamant that I was not going to mix validation with the return value. But after contemplating it, I believe it would read better to do it for simple guard clauses that read basically as a simple `if-else 
 statement`.
 
+## Solution File
+
+`CodingExercise9.java`
+
 ---
 
-## Coding Exercise 10: A Minutes-To-Years-And-Days Calculator
+# Coding Exercise 10: A Minutes-To-Years-And-Days Calculator
 
-### Goal
+## Goal
 
 Given a set number of minutes calculate the years and days then print them out.
 
-### Requirements:
+## Requirements:
 
-#### 1. printYearsAndDays(`long` minutes)
+### 1. printYearsAndDays(`long` minutes)
 
 - Return Type: `void`
 - Validation Check: 
@@ -345,29 +349,33 @@ Given a set number of minutes calculate the years and days then print them out.
   - `YY` = calculated years
   - `ZZ` = calculated days
 
-### Approach:
+## Approach:
 
 - Had validation check at the top of the method.
-- Calcualted the total hours, days, years, and remaining days from the parameter.
+- Calculated the total hours, days, years, and remaining days from the parameter.
 - Printed format using the calculated values.
 
-### Key Observations:
+## Key Observations:
 
 - Whenever I'm tasked with the result being printed out. the method always seems the return type of`void`
 - Kept calculations as `long` to keep it simple
 - Could have placed the validation check inside the `println()` with the format as a ternary, but with all the `()` and other symbols for the ternary it appeared cluttered.
 
+## Solution File
+
+`CodingExercise10.java`
+
 ---
 
-## Coding Exercise 11: An Equality Printer
+# Coding Exercise 11: An Equality Printer
 
-### Goal
+## Goal
 
 When given 3 numbers, determine if all numbers all the same, they are all different, or Neither are equal or different.
 
-### Requirements
+## Requirements
 
-#### printEqual(`int` num1, `int` num2, `int` num3)
+### printEqual(`int` num1, `int` num2, `int` num3)
 
 - Return Type: `void`
 - Validation Check: 
@@ -379,34 +387,50 @@ When given 3 numbers, determine if all numbers all the same, they are all differ
 - Print Neither all are equal or different 
   - example: 1, 1, 2
 
-### Approach:
+## Approach:
 
 - Added validation check at top of method.
 - Used `if-else if statements` to print the message
-- 
-### Observations
+
+## Key Observations
 
 - Original had the `return` keyword to cut out the `else` block, but it didn't seem to cut down on code
 - Originally had the variable names as "firstValue" etc. but it was long to type, and I felt that "num1" conveyed the same meaning as "firstValue".
 
+## Solution File
+
+`CodingExercise11.java`
+
 ---
 
-## Coding Exercise 12: Designing A 'Playing Cat' Logic Program
+# Coding Exercise 12: Designing A 'Playing Cat' Logic Program
 
-### Goal
+## Goal:
+
 Create a method that needs to determine if the cat is playing based on if it's summer and the temperature 
 
-### Requirements
+## Requirements:
 
-#### isCatPlaying
-- 2 parameters: boolean summer; int temperature
-- `return`: boolean
+### 1. isCatPlaying(`boolean` summer, `int` temperature)
+
+- Return Type: `boolean`
 - Cat is playing if temperature is 25-35
   - If it's summer Cat is playing if temperature is 25-45
 
-#### Observations
-- Since the upper limit is variable so we can use a ternary operator
-- `return` can be one line of code, but reads better if there are to have variables for said choke points
+## Approach:
+
+- Created a variable for the upper limit of temperature
+- Returned directly the comparison if temperature is within the range of the lower/upper limits
+
+## Key Observations:
+
+- Since the upper limit is variable, I attached the possible value to a variable using a ternary operator
+- I thought about using a variable for the lower limit, but I assumed that it was implied with the variable temperature being used and `maxTemp` to signify a max temperature. I assume that the using a variable for 
+this single value will make the code look cluttered.
+
+## Solution File
+
+`CodingExercise12.java`
 
 ---
 
@@ -418,17 +442,26 @@ Write a method called printNumberInWord. The method has one parameter **number**
 **"ZERO", "ONE", "TWO",... "NINE", "OTHER"** if the int parameter number is **0, 1, 2, ... 9** or **other** for any other number including negative numbers. 
 
 ## Requirements:
-- `printNumberInWord`
-  - Parameter(s): `int` number
-  - Return Type: `void`
-  - Output: Print out the number in word format
 
-## Notes/Observations:
+### 1. printNumberInWord(`int` number)
+  - Return Type: `void`
+  - Prints the number in word format or other for any number below 0 or above 9
+
+## Approach:
+- Use `switch` statement as an expression to assessing a value to variable
+- Print out that word directly in a `println()`
+
+## Key Observations:
+
 - Problem can be solved with either an `if-else` statement or a `switch` statement.
 - If you use an `enhanced switch` you can place it inside an `System.out.println` statement.
 - Can assign the word directly to a variable
   - Makes it more readable
   - Doesn't have the problem of changing a `String` since variable is discarded once method is done running.
+
+## Solution File
+
+`CodingExercise13.java`
 
 ---
 
@@ -444,52 +477,85 @@ Write another method named **getDaysInMonth** with two parameters **month** and 
 **< 1** or **> 9999** return **-1**. This method needs to return the number of days in the month.
 
 ## Requirements
-- `isLeapYear`
-  - Parameter(s): `int` year
+
+### 1. isLeapYear(`int` year)
+
   - Return Type: `boolean`
-  - Validation: **year** needs to be > 1 and < 9999
+  - Validation Check: 
+    - **year** needs to be >= 1 and <= 9999
   - Output: `true` &rarr; month is a leap year; `false` &rarr; if month is not a leap year
 
-- `getDaysInMonth`
-  - Parameter(s): `int` month, `int` year
+### 2. getDaysInMonth(`int` month, `int` year)
+
   - Return Type: `int`
-  - Validation: **month** needs to be >= 1 and <= 12; **year** needs to be > 1 and < 9999
+  - Validation Check: 
+    - **month** needs to be >= 1 and <= 12; **year** needs to be >= 1 and <= 9999
   - Output: days in the month based on if the year is a leap year
     - The only month that changes is February
 
-## Notes/Observations:
-- I can use the code for `isLeapYear` from **Coding Exercise 5: Implementing A Precise Leap Year Calculator**
-- I can use an `enhanced switch` to return directly from `getDaysInMonth`
+## Approach:
+
+- Used the code done in Coding Exercise 5 to complete the `isLeapYear()`
+- Used a `switch expression` to return directly from `getDaysInMonth()`
+- Use a ternary to return 28 or 29 based on if it's a leap year
+- I put the default as 31 since so many months, and any month not listed would automatically have 31 days
+
+## Key Observations:
+
 - I can run the validation check for `month` inside of the `enhanced switch`
   - This mixes the responsibilities between the validation `if` statement and the `switch` statement.
-- I can use the ternary operator to choose between 28 and 29 for February based on result from `isLeapYear`
+
+## Solution File
+
+`CodingExercise14.java`
 
 ---
 
 # Coding Exercise 15 — Summing Odd Numbers in a Range
 
 ## Problem Summary
+
 Implement two methods: `isOdd()` to determine if a number is positive and odd, and `sumOdd()` to return the sum of all odd numbers within a given 
 inclusive range.
 
 ## Requirements
-- `isOdd` returns `false` for numbers ≤ 0.
-- `sumOdd` returns -1 if:
-  - start ≤ 0
-  - end ≤ 0
-  - end < start
-- Use a for loop to accumulate odd values.
+
+### 1. isOdd(`int` number)
+- Return Type: `boolean`
+- Validation Check:
+  - numbers ≤ 0 &rarr; return false
+- Return if the number is odd
+
+### 2. sumOdd(`int` start, `int` end)
+
+- Validation Check:
+  - end < start &rarr; return -1
+  - start < 0 AND end < 0 &rarr; return -1
 - Use `isOdd` as a helper method.
+- Return the sum of the odd values from start to end
 
 ## Approach
-- Validate input using guard clauses.
-- Loop from start to end and accumulate values where `isOdd(i)` is true.
+
+- Validated input using guard clauses.
+  - Combined validation check with the return statement in `isOdd()`
+  - Only checked if `end < start || start < 0`
+- `isOdd()` checked if number is not evenly divisible by 2.
+- Created a variable to ensure that the first number we start with is odd called `oddStart`
+- Created a variable to hold the sum called `sumOfOddNumbers`
+- Looped from oddStart until end incrementing the variable by 2
 
 ## Key Observations
+
 - Guard clauses reduce nesting.
 - Helper method prevents duplicated odd-checking logic.
+- the "initialization" part of a for loop is optional, still need a `;` for that portion however.
+- When trying to understand how to optimize my loop, I should look for 3 things:
+  - Can I skip the Line
+  - Am I looking at things I don't need to look at?
+  - Am I doing the same chore twice?
 
 ## Solution File
+
 `CodingExercise15.java`
 
 ---

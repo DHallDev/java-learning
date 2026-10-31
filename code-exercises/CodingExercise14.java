@@ -9,7 +9,6 @@ public class CodingExercise14 {
         if (year < 1 || year > 9999) {
             return false;
         }
-
         return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
     }
 
@@ -17,9 +16,8 @@ public class CodingExercise14 {
         if (month < 1 || month > 12 || year < 1 || year > 9999) {
             return -1;
         }
-
         return switch (month) {
-            case 2 -> !isLeapYear(year) ? 28 : 29;
+            case 2 -> isLeapYear(year) ? 29 : 28;
             case 4, 6, 9, 11 -> 30;
             default -> 31;
         };

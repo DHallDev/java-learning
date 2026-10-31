@@ -33,13 +33,11 @@ public class SwitchExpressionChallenge {
             case 6 -> "Saturday";
             default -> "Invalid Day";
         };
-
         System.out.println(day + " stands for " + dayOfWeek);
     }
 
     public static void printWeekDay(int day) {
         String dayOfWeek = "Invalid Day";
-
         if (day == 0) {
             dayOfWeek = "Sunday";
         } else if (day == 1) {
@@ -55,7 +53,6 @@ public class SwitchExpressionChallenge {
         } else if (day == 6) {
             dayOfWeek = "Saturday";
         }
-
         System.out.println(day + " stands for " + dayOfWeek);
     }
 }

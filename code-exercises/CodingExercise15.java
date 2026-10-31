@@ -9,28 +9,21 @@ public class CodingExercise15 {
         System.out.println("True/False: 15 is odd = " + isOdd(15));
     }
 
-    public static int sumOdd(int start, int end) {
+    public static boolean isOdd(int number) {
+        return number > 0 && number % 2 != 0;
+    }
 
-        if ((end < start) || (start <= 0)) {
+    public static int sumOdd(int start, int end) {
+        if (end < start || start < 0) {
             return -1;
         }
 
-        int sum = 0;
-        for (int i = start; i <= end; i++) {
-            if (isOdd(i)) {
-                sum += i;
-            }
+        int oddStart = isOdd(start) ? start : start + 1;
+        int sumOfOddNumbers = 0;
+
+        for (; oddStart <= end; oddStart += 2) {
+            sumOfOddNumbers += oddStart;
         }
-
-        return sum;
-    }
-
-    public static boolean isOdd(int number) {
-
-        if (number <= 0) {
-            return false;
-        }
-
-        return number % 2 != 0;
+        return sumOfOddNumbers;
     }
 }
