@@ -1,4 +1,5 @@
 # For Loop Lesson
+
 This folder contains example code from Tim Buchalka’s Java Programming Masterclass demonstrating how Java’s loop structures work in real programs. The goal of this lesson is 
 to understand **when and how to use each loop type**, how loop conditions behave, and how loop control keywords like break and continue affect execution.
 
@@ -7,6 +8,7 @@ to understand **when and how to use each loop type**, how loop conditions behave
 ## 📘 Concepts Demonstrated
 
 ### For Loop
+
 - Counted iteration
 - Loop initialization, condition, and update
 - Using a loop variable (`counter`, `rate`, `i`)
@@ -15,17 +17,20 @@ to understand **when and how to use each loop type**, how loop conditions behave
 - Breaking out of a loop earlying using `break`
 
 ### While Loops
+
 - Repeating code while a condition remains true
 - Loop conditions checked *before* each iteration
 - Using `continue` to skip specific iterations
 - Updating loop variables manually
 
 ### Do-While Loops
+
 - Loop body runs **at least once**
 - Condition checked *after* the loop runs
 - Useful for menu-style or input-validation logic
 
 ### Loop Control Flow
+
 - `break` &rarr; exit the loop immediately
 - `continue` &rarr; skip the current iteration
 - How loop conditions determine when a loop stops
@@ -37,6 +42,7 @@ to understand **when and how to use each loop type**, how loop conditions behave
 ## 📂 File Included
 
 ### ForLoop.java
+
 Demonstrates:
 - Counting from 1 to 5
 - Calculating interest at different rates
@@ -44,6 +50,7 @@ Demonstrates:
 - How loop variables and update steps affect iteration
 
 ### WhileLoop.java
+
 Demonstrates:
 - Converting a `for` loop into a `while` loop
 - A `do-while` example showing guaranteed first execution
@@ -53,6 +60,7 @@ Demonstrates:
 --- 
 
 ## 🔗 Related Notes
+
 - `notes/loops.md`
 - `notes/expressions.md`
 - `notes/casting.md`

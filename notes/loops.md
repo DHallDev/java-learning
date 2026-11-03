@@ -1,6 +1,8 @@
 # Loops
 
-A loop is a control-flow structure  that repeats blocks of code while a condition is true or until a specific endpoint is reached. There are **three main loop types**:
+A loop is a control-flow structure  that repeats blocks of code while a condition is true or until a specific endpoint is reached. There are 
+**three main loop types**:
+
 - **for loops** &rarr; repeats a certain number of times.
 - **while loops** &rarr; repeat while a condition is true
 - **do-while loops** &rarr; repeats at least once, then checks if condition is true
@@ -21,6 +23,7 @@ A loop is a control-flow structure  that repeats blocks of code while a conditio
 ## Why Is This Important
 
 Loops allow my program to:
+
 - automate repetitive task
 - process data efficiently
 - react to changing conditions
@@ -76,7 +79,7 @@ A **while loop** repeats **as long as** a condition is true.
 
 - Condition is checked **before** the loops runs
 - Loop may run **zero times** if the condition is false
-- Best for situations where I **don't know** how  many times the loop will run
+- Best for situations where I don't know how many times the loop will run
 - Used for:
   - Waiting for user input
   - running until a state changes
@@ -91,9 +94,9 @@ A **while loop** repeats **as long as** a condition is true.
 #### Example
 
     int health = 100;
-
-    while (health > 0) {
-        health -= 10;
+    boolean statusAliment = true;
+    while (health > 0 && statusAliment) {
+        statusAlimentDamage(poison);
         System.out.println(health);
     }
 
@@ -123,7 +126,6 @@ A **do-while loop** guarantees the code runs **at least once**.
 #### Example
 
     int option;
-
     do {
         option = getUserInput();
     } while (option != 1);
