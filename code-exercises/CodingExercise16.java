@@ -1,3 +1,5 @@
+// Coding Exercise 16 Solution:
+// See README.md for full challenge description
 public class Main {
 
     public static void main(String[] args) {

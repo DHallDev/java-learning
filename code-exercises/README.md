@@ -596,3 +596,41 @@ A palindrome is a number that when reversed is the same as the original number (
 ## Solution.File
 
 `CodingExercise16.java`
+
+---
+
+# Coding Exercise 17: Summing The First And Last Digits Of An Integer
+
+## Problem Summary
+
+Implement a method that takes the first and last number of a given number and return their sum. If the number is negative, return 
+-1 to indicate an invalid value.
+
+## Requirements:
+
+### 1. SumFirstAndLastDigit(`int` number)
+
+- Validation Check:
+  - If number is negative &rarr; return -1
+- Get the last digit of `number`
+- Get the first digit of `number`
+- Add them together
+- Return the result
+
+## Approach:
+
+- Validation check at the top
+- Created a variable of type `int` named lastDigit that holds the last digit in `number`
+- Created a variable of type `int` named firstDigit that holds the value of `number` but will be changed to hold the first digit in `number`
+- Created a variable that will continue until there is only one digit in `firstDigit`
+  - This means if `number` is only one digit, both `firstDigit` and `lastDigit` will be the same number
+- Returned the sum of `firstDigit` and `lastDigit`
+
+## Key Observations
+
+- Had to change the condition in while loop due to if I continue until `firstDigit > 0 ` is false I'll end up with `firstDigit` as 0.
+- Code is possible with a `for` statement as long as I put the condition as the same in the header. But it was easier to of it with an `while` statement.
+
+## Solution.File
+
+`CodingExercise17.java`
