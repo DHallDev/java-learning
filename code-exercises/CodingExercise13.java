@@ -1,3 +1,5 @@
+// Coding Exercise 13 Solution:
+// See README.md for full challenge description
 public class CodingExercise13 {
 
     public static void main(String[] args) {

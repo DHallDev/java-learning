@@ -563,19 +563,36 @@ inclusive range.
 # Coding Exercise 16: Identifying Palindromic Numbers For Enhanced Numeric Validation
 
 ## Problem Summary:
-Implement a method that returns `true` or `false` if the parameter is a Palindrome.
+
+Implement a method that returns `true` or `false` if the parameter is a Palindrome. Please note that a negative number can be a palindrome.
+
+A palindrome is a number that when reversed is the same as the original number (e.g. 1111 or 1221)
 
 ## Requirements:
-- Method isPalindrome(int number)
-- Return `true` if number is a Palindrome
-- Return `false` if number isn't a Palindrome
+
+### 1. isPalindrome(`int` number)
+
+- Return if the parameter is a palindrome or not.
 
 
 ## Approach:
 
+- Created variable of type `int` named originalNumber that holds the original value of number which mutated
+- Created variable of type `int` named numberInReverse that holds the value 0, but will hold the number in reverse order
+- Created a while loop that will continue as long as `originalNumber` doesn't equal 0.
+  - Covers negative numbers since negative numbers can be considered palindromes.
+- Multiplied numberInReverse by 10.
+- Added the last digit from `originalNumber` to `numberInReverse`
+- Got rid of the last digit in `originalNumber`
+- Compared `number` to `numberInReverse` and return the result
 
 ## Key Observations:
 
+- When removing the last digit `/ 10` removes it regardless of if its negative or positive.
+- In order to compare the numbers, a temp variable was needed to hold the value temporarily.
+- In order to add the next digit you need to `* 10` to add a 0, therefore being able to add the next digit from `originalNumber`
+- Depending on where you put this expression, you could end up adding another 0 at the end of reverse, resulting in the return statement always return `false`.
 
 ## Solution.File
+
 `CodingExercise16.java`
