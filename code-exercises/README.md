@@ -634,3 +634,40 @@ Implement a method that takes the first and last number of a given number and re
 ## Solution.File
 
 `CodingExercise17.java`
+
+---
+
+# Coding Exercise 18: Calculating The Sum Of All Even Digits
+
+## Problem Summary:
+
+Implement a method that returns that sum of the even digits in the number. If the number was negative, return -1 to indicate an invalid value.
+
+## Requirements:
+
+### 1. getEvenDigitSum(`int` number)
+
+- Validation Check:
+  - If number is negative &rarr; return -1
+- Get the last digit of `number`
+- Check if that digit is negative
+  - Add to sum if it is
+- return the sum
+
+## Approach:
+
+- Validation check at the top
+- Create a `int` variable named sum to hold the value of even digits
+- Created a for loop that loops until i (which holds the value of `number`) isn't 0
+- Check if the last digit in i is even
+  - Add the digit to sum if true
+- Return the value of sum
+
+## Key Observations
+
+- Could have used a while loop, but used a for loop since the `for` statement header creates a temporary variable that can be 
+mutated 
+- Initialized a varliable of type `int` called lastDigit that will hold the last digit in `i`
+  - In JShell you learn about initializing variables on th same line using `,` it works wonders here.
+  - By creating `i` and `lastDigit` in the `for` statement header you created the variables you needed in the narrowest scope 
+  possible.

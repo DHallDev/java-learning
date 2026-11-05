@@ -1,4 +1,4 @@
-// Coding Exercise 16 Solution:
+// Coding Exercise 17 Solution:
 // See README.md for full challenge description
 public class CodingExercise17 {
 
