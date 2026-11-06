@@ -740,3 +740,34 @@ Implement a method that takes three numbers between 10 - 1000 inclusively and de
 ## Solution File
 
 `CodingExercise20.java`
+
+---
+
+# Coding Exercise 21: Listing All Factors Of A Given Number
+
+## Problem Summary:
+
+Implement a method that prints all the factos of a given number. If the number is less than 1, print "Invalid Value".
+
+## Requirements:
+
+### 1. printFactors(`int` number)
+
+- Validation Check:
+  - If `number` less than 1 &rarr; Print "Invalid Value"
+- Print all factors of the number
+
+### Notes:
+
+A factor of a number is an integer which divides that number wholly (i.e. without leaving a remainder).
+
+## Apprroach:
+
+- Implemented Valdiation Check
+- Looped from starting 1 until the half of the number
+- If `number` can by evenly divisible by the loop number &rarr; print the number
+- Finally print the number
+
+## Solution File
+
+`CodingExercise21.java`

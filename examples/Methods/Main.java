@@ -10,7 +10,7 @@ public class Main {
         return score * 1000;
     }
 
-    public static int calculateScore( int score) {
+    public static int calculateScore(int score) {
         return calculateScore("Anonymous", score);
     }
 
