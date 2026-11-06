@@ -593,7 +593,7 @@ A palindrome is a number that when reversed is the same as the original number (
 - In order to add the next digit you need to `* 10` to add a 0, therefore being able to add the next digit from `originalNumber`
 - Depending on where you put this expression, you could end up adding another 0 at the end of reverse, resulting in the return statement always return `false`.
 
-## Solution.File
+## Solution File
 
 `CodingExercise16.java`
 
@@ -631,7 +631,7 @@ Implement a method that takes the first and last number of a given number and re
 - Had to change the condition in while loop due to if I continue until `firstDigit > 0 ` is false I'll end up with `firstDigit` as 0.
 - Code is possible with a `for` statement as long as I put the condition as the same in the header. But it was easier to of it with an `while` statement.
 
-## Solution.File
+## Solution File
 
 `CodingExercise17.java`
 
@@ -672,7 +672,7 @@ mutated
   - By creating `i` and `lastDigit` in the `for` statement header you created the variables you needed in the narrowest scope 
   possible.
 
-## Solution.File
+## Solution File
 
 `CodingExercise18.java`
 
@@ -700,6 +700,43 @@ Implement a method that checks two numbers between 10 - 99 inclusively. The meth
 - Created four variables of type `int` that holds each digit in `num1` and `num2` respectively
 - Return the result of comparing all four variables
 
-## Solution.File
+## Solution File
 
 `CodingExercise19.java`
+
+---
+
+# Coding Exercise 20: Evaluating The Last Digit For Multiple Integer Comparisons
+
+## Problem Summary:
+
+Implement a method that takes three numbers between 10 - 1000 inclusively and determine if at least two of them share the rightmost digit.
+
+## Requirements:
+
+### 1. hasSameLastDigit(`int` num1, `int` num2, `int` num3)
+
+- Validation Check:
+  - If `num1`, `num2`, or `num3` is below 10 OR above 1,000 &rarr; return false;
+- Get the last digit of `num1`, `num2`, and `num3`
+- Return true if any of the last digits are the same
+
+### 2, isValid(`int` number) 
+
+- return if `number` is between 10 AND 1,000
+
+## Approach:
+
+1. hasSameLastDigit():
+   - Validation check at the top
+     - used `isValid()` to conduct validation check
+   - Created three variables of type `int` named num1LastDigit, num2LastDigit, and num3LastDigit that will hold the values of the 
+   rightmost digit of the three variables.
+   - Return the result of comparing the above variables against each other
+
+2. isValid():
+   - Return directly if `number` is greater than or equal to 10 AND less than or equal to 1,000
+
+## Solution File
+
+`CodingExercise20.java`
