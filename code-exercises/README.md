@@ -671,3 +671,35 @@ mutated
   - In JShell you learn about initializing variables on th same line using `,` it works wonders here.
   - By creating `i` and `lastDigit` in the `for` statement header you created the variables you needed in the narrowest scope 
   possible.
+
+## Solution.File
+
+`CodingExercise18.java`
+
+---
+
+# Coding Exercise 19: Checking For A Shared Digit Between Two Numbers
+
+## Problem Summary:
+
+Implement a method that checks two numbers between 10 - 99 inclusively. The method needs to return whether a digit appears in both numbers.
+
+## Requirements:
+
+### 1. hasSharedDigit(`int` num1, `int` num2)
+
+- Validation Check:
+  - If `num1` or `num2` is less than 10 OR greater than 99 &rarr; return false
+- Get the last digit of `num1`
+- Check if that digit is either digit in `num2`
+- If not, get the final digit in `num1` and repeat above
+
+## Approach:
+
+- Validation check at the top
+- Created four variables of type `int` that holds each digit in `num1` and `num2` respectively
+- Return the result of comparing all four variables
+
+## Solution.File
+
+`CodingExercise19.java`
