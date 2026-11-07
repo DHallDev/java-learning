@@ -809,3 +809,43 @@ The greatest common divisor is the largest positive integer that can fully divid
 ## Solution File
 
 `CodingExercise21.java`
+
+---
+
+# Coding Exercise 23: Confirming Perfect Numbers Through Sum Of Proper Divisors
+
+## Problem Summary:
+
+Implement a method that calculates if the number is **perfect**. Then return true if the number is **perfect**.
+
+## Notes:
+
+A perfect number is a **positive integer** which is equal to the sum of its proper positive divisors. Proper positive divisors are positive 
+integers that fully divide the perfect number without leaving a remainder and exclude the perfect number itself.
+
+## Requirements:
+
+### 1. isPerfectNumber(`int` number)
+
+- Validation Check:
+  - If `number` less than 1 &rarr; return false
+- Find all the divisor of `number`
+- Add them all together
+- Compare the sum to the original value of `sum`
+
+## Approach:
+
+- Implemented Validation Check
+- Initialized a variable of type `int` named **sum** to hold the sum of add all the divisors together
+- Looped until the iteration variable reaches half of **number**
+- If **number** is evenly divisible by the iteration variable, add it to **sum**
+- Compare **number** to **sum** and return the result
+
+## Key Observations:
+
+- Assigned the value 1 to sum **sum**. This is because regardless of the number, 1 is always a factor.
+- The Loop iterator starts at 2, because I already accounted for 1 by assigning the value 1 to **sum**.
+
+## Solution File
+
+`CodingExercise22.java`
