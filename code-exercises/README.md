@@ -771,3 +771,41 @@ A factor of a number is an integer which divides that number wholly (i.e. withou
 ## Solution File
 
 `CodingExercise21.java`
+
+---
+
+# Coding Exercise 22: Derriving The Greatest Common Divisor (GCD) Efficiently
+
+## Problem Summary:
+
+Implement a method that returns the greates common divisor between them. If either number is below 10 return 01.
+
+## Requirements:
+
+### 1. getGreatestCommonDivisor(`int` first, `int` second)
+
+- Validation Check:
+  - If `first` or `second` below 10 &rarr; return -1
+- Determine which number is smaller
+- Find a divisor that divides evenly for that number
+- Check if that number also divides the other number
+- Return the greatest common divisor
+
+### Notes:
+
+The greatest common divisor is the largest positive integer that can fully divide each of the integers (i.e. without leaving a remainder).
+
+## Approach:
+
+- Implemented Validation Check
+- Initialized two variables of type `int` named smallestNum & largestNum respectively. These numberse will hold the smallest & largest number between the two
+- Created an early return `if` statement that checks if `largestNum` can be easily divided by `smallestNum`
+  - If that's the case then `smallestNum` is the GCD and we can return early we other checks
+- Initialized a variable of type `int` named gcd that will hold the GCD
+- Looped until the loop variable is greater than half of `smallestNum`
+- Checked if first and second can be evenly divided by the loop variable
+- Returned the gcd
+
+## Solution File
+
+`CodingExercise21.java`
