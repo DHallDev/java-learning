@@ -849,3 +849,42 @@ integers that fully divide the perfect number without leaving a remainder and ex
 ## Solution File
 
 `CodingExercise22.java`
+
+---
+
+# Coding Exercise 24: Coverting Digits Into Words And Handling Edge Cases
+
+## Problem Summary:
+
+Implement a method that print out number in word format. If the number is negative, print "Invalid Value".
+
+Example:
+123
+One
+Two
+Three
+
+## Requirements:
+
+### 1. numberToWords(`int` number)
+
+- Validation Check:
+  - If **number** less than 0 &rarr; Print "Invalid Value"
+- Check the number to see if it's zero
+  - Print "Zero"
+- Reverse the number
+- Take each digit from the reverse number
+- Convert that digit into a word (e.g. "Zero", "One", "Two", etc.) and print it out
+- Remove the last digit from **number**
+- Check the amount of digits in the number
+  - Print "Zero" for each missing digit
+
+### 2. reverse(`int` number)
+
+- Take each digit from **number** and returned it in reverse order
+- Needs to also do negative numbers.
+
+### 3. getDigitCount(`int` number)
+
+- Count each digit found in **number**
+- Return the number of digits in **number**
