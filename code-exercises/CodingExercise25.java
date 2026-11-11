@@ -1,4 +1,4 @@
-// Coding Exercise 24 Solution:
+// Coding Exercise 25 Solution:
 // See README.md for full challenge description
 public class CodingExercise25 {
 

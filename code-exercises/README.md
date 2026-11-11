@@ -897,9 +897,9 @@ Three
 Write a method named `canPack` that determines if it is possible to make a package with an exact target weight using a given number of big and small flour bags.
 
 ### Parameters
-* **`bigCount`**: The number of large flour bags available (**5 kilos** each).
-* **`smallCount`**: The number of small flour bags available (**1 kilo** each).
-* **`goal`**: The exact target weight, in kilos, required to assemble the package.
+* `bigCount`: The number of large flour bags available (**5 kilos** each).
+* `smallCount`: The number of small flour bags available (**1 kilo** each).
+* `goal`: The exact target weight, in kilos, required to assemble the package.
 
 ### Rules & Constraints
 * **Total Weight**: The combined weight of the available bags must be at least equal to `goal`.
@@ -912,7 +912,7 @@ Write a method named `canPack` that determines if it is possible to make a packa
 * `canPack(1, 5, 9)` &rarr; returns `true` (1 big bag + 4 small bags = 9 kilos)
 * `canPack(-3, 2, 12)` &rarr; returns `false` (negative parameter)
 
-### Pseudocode (Instructions):
+### Pseudocode (Instructions)
 1. Check if the parameters are valid.
 2. Check how many full big bags (`bigCount`) can fit inside `goal`.
 3. Determine if you have enough big bags to fit inside `goal`.
@@ -920,5 +920,38 @@ Write a method named `canPack` that determines if it is possible to make a packa
 4. Check if `smallCount` can cover the remaining `goal`
 5. Return the result
 
-### Solution File:
+### Solution File
 `CodingExercise25.java`
+
+---
+
+# Coding Exercise 26: Identifying The Largest Prime Factor Of A Number
+
+## Problem Summary
+Write a method named `getLargestPrime` that calculates a given numbers largest prime factor and returns it.
+
+### Parameters
+* `number`: The number from which we derive the largest prime factor from
+
+### Rules & Constraints
+* **Validation**: If the parameter is negative, the method needs to return **-1**
+* **No Primes**: If the number doesn't have a prime factor, the method needs to return **-1**
+* **Invalid Primes**: The numbers **0** and **1** aren't primes
+
+### Examples
+* `getLargestPrime(21)` &rarr; returns **7**
+* `getLargestPrime(217)` &rarr; returns **31**
+* `getLargestPrime(0)` &rarr; returns **-1**
+* `getLargestPrime(45)` &rarr; returns **5**
+* `getLargestPrime(-1)` &rarr; returns **-1**
+
+### Pseudocode (Instructions)
+1. Check if the parameter is valid.
+2. Check if a range of numbers is can evenly divide `number`.
+3. Repeatedly divide `number` by the divisor until it can't do so evenly.
+4. Check if `number` is 1
+5. IF `number` is 1 return the last factor that was able to evenly divide it
+6. ELSE return `number` since that means `number` itself is a prime number
+
+### Solution File
+`CodingExercise26.java`
