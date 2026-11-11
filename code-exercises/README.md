@@ -888,3 +888,37 @@ Three
 
 - Count each digit found in **number**
 - Return the number of digits in **number**
+
+---
+
+# Coding Exercise 25: Managing Flour Pack Requirements With Limited Bucket Sizes
+
+## Problem Summary
+Write a method named `canPack` that determines if it is possible to make a package with an exact target weight using a given number of big and small flour bags.
+
+### Parameters
+* **`bigCount`**: The number of large flour bags available (**5 kilos** each).
+* **`smallCount`**: The number of small flour bags available (**1 kilo** each).
+* **`goal`**: The exact target weight, in kilos, required to assemble the package.
+
+### Rules & Constraints
+* **Total Weight**: The combined weight of the available bags must be at least equal to `goal`.
+* **No Partial Bags**: Only full, undivided bags can be used. If a big bag exceeds the remaining goal amount, it cannot be used.
+* **Leftovers Allowed**: It is acceptable to have unused bags left over, as long as a combination of full bags matches the exact `goal`.
+* **Validation**: If any of the parameters are negative, the method must automatically return `false`.
+
+### Examples
+* `canPack(2, 0, 9)` &rarr; returns `false` (2 big bags = 10 kilos; cannot divide a big bag to reach 9)
+* `canPack(1, 5, 9)` &rarr; returns `true` (1 big bag + 4 small bags = 9 kilos)
+* `canPack(-3, 2, 12)` &rarr; returns `false` (negative parameter)
+
+### Pseudocode (Instructions):
+1. Check if the parameters are valid.
+2. Check how many full big bags (`bigCount`) can fit inside `goal`.
+3. Determine if you have enough big bags to fit inside `goal`.
+3. Determine how much of `goal` is left after taking away the `bigCount` that can fit.
+4. Check if `smallCount` can cover the remaining `goal`
+5. Return the result
+
+### Solution File:
+`CodingExercise25.java`
