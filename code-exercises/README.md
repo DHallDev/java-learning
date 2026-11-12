@@ -955,3 +955,57 @@ Write a method named `getLargestPrime` that calculates a given numbers largest p
 
 ### Solution File
 `CodingExercise26.java`
+
+---
+
+# Coding Exercise 27: Constructing A Diagonal Star Pattern With Loops
+
+## Problem Summary
+Write a method named `printSquareStar` that generates a rectangular pattern of stars (`*`).
+
+### Parameters
+* `number`: Determines how many `*` are printed, as well as how many rows/columns
+
+### Rules & Constraints
+* **Validation**: If `number` is less than 5, the method needs to print `Invalid Value`.
+* **Star Placement**: The placement of stars need to follow a particular order
+  * In the first and last **row**
+  * In the first and last **column**
+  * When the **row** number and the **column** number are the same
+  * When the column number equals `number - currentRow + 1`
+* **Spaces**: When not printing stars, print `" "` (an empty space) instead
+
+### Examples
+* `printSquareStar(5)`:
+
+    *****
+    ** **
+    * * *
+    ** **
+    *****
+
+* `printSquareStar(8)`:
+
+    ********
+    **    **
+    * *  * *
+    *  **  *
+    *  **  *
+    * *  * *
+    **    **
+    ********
+
+### Psudocode (Instructions)
+1. Check if parameter is valid.
+2. Check if we are in the first or last `row`.
+   * IF YES &rarr; print a `*`
+3. Checkif we are in the first or last `column`.
+   * IF YES &rarr; print a `*`
+4. Check if `row` or `column` are the same.
+   * IF YES &rarr; print a `*`
+   * IF NO &rarr; print a `" "`
+5. Check if you the column you are in is `number - currentRow + 1`
+6. After the last column move to the next line
+
+### Solution File
+`CodingExercise26.java`
