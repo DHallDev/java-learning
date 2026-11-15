@@ -1058,3 +1058,76 @@ BEGIN `inputThenPrintSumAndAverage`:
 
 ### Solution File
 `CodingExercise28.java`
+
+---
+
+# Coding Exercise 29: Efficient Paint Job Planning With Bucket Calculations
+
+## Problem Summary
+Bob needs to calculate how many buckets is need to paint an area. Create **3** methods named `getBucketCount` that each take in different parameters:
+1. `getBucketCount()`:
+   * When given a height, width, area per bucket, and the amount of extra buckets calculate how many buckets Bob will need to 
+   buy to do his job.
+2. `getBucketCount()`:
+   * Bob doesn't like putting 0 for extra buckets, so I must create a method that calculates how many buckets Bob needs to buy as 
+   though he had 0 buckets.
+3. `getBucketCount()`:
+   * Bob sometimes doesn't know the width or height of the wall, but he knows the area. So, I must create a method that calculates 
+   how many buckts Bob needs to buy based on the area
+
+### Parameters
+1. `getBucketCount`:
+   * `double width`: Represents the width of the wall
+   * `double height`: Represents the height of the wall
+   * `double areaPerBucket`: Represents the amount of area per bucket
+   * `int extraBuckets`: Represents how many buckets Bob already owns
+2. `getBucketCount`:
+  * `double width`: Represents the width of the wall
+  * `double height`: Represents the height of the wall
+  * `double areaPerBucket`: Represents the amount of area per bucket
+3. `getBucketCount`:
+   * `area`: Represents the area that needs to be covered
+   * `areaPerBucket`: Represents the amount of area per bucket
+
+## Rules & Constraints
+1. `getBucketCount`
+   * **Validation**: If `width`, `height`, or `areaPerBucket` less than or equal to 0 **OR** `extraBucket` less than 0 &rarr; return **-1** to
+   indicate a invalid value
+   * **No Partial Buckets**: Bob can buy buckets half full so the buckets he needs to buy needs to be a whole number
+2. `getBucketCount`
+   * **Validation**: If `width`, `height`, or `areaPerBucket` less than or equal to 0 &rarr; return **-1** to indicate a invalid value
+   * **Zero Buckets**: This method should only be used if Bob has no buckets at home
+3. `getBucketCount`
+   * **Validation**: If `area` or `areaPerBucket` less than or equal to 0 &rarr; return **-1** to indicate a invalid value
+   * **Only Area Is Known**: This method should only be used if Bob only knows the area
+
+## Examples
+1. getBucketCount(width, height, areaPerBucket, extraBuckets):
+   * getBucketCount(-3.4, 2.1, 1.5, 2); &rarr; **return -1**
+   * getBucketCount(3.4, 2.1, 1.5, 2); &rarr; **return 3**
+   * getBucketCount(2.75, 3.25, 2.5, 1); &rarr; **return 3**
+2. getBucketCount(width, height, areaPerBucket):
+   * getBucketCount(-3.4, 2.1, 1.5); &rarr; **return -1**
+   * getBucketCount(3.4, 2.1, 1.5); &rarr; **return 5**
+   * getBucketCount(7.25, 4.3, 2.35); &rarr; **return 14**
+3. getBucketCount(area, areaPerBucket):
+   * getBucketCount(3.4, 1.5); &rarr; **return 3**
+   * getBucketCount(6.26, 2.2); &rarr; **return 3**
+   * getBucketCount(3.26,0.75); &rarr; **return 5**
+
+### Pseudocode (Instructions)
+BEGIN `getBucketCount`:
+1. IF `width <= 0` **OR** `height <= 0` **OR** `areaPerBucket <= 0` **OR** `extraBuckets < 0`:
+   * RETURN **-1**
+2. RETURN CALL `getBucketCount((width * height), areaPerBucket) - extraBuckets`
+
+BEGIN `getBucketCount`:
+1. RETURN CALL `getBucketCount(width, height, areaPerBucket, 0)`
+
+BEGIN `getBucketCount`:
+1. IF `area <= 0` **OR** `areaPerBucket <= 0`:
+   * RETURN **-1**
+2. RETURN ROUND_UP(`area / areaPerBucket`)
+
+### Solution File
+`CodingExercise29.java`
