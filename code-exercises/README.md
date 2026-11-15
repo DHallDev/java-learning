@@ -1009,3 +1009,52 @@ Write a method named `printSquareStar` that generates a rectangular pattern of s
 
 ### Solution File
 `CodingExercise26.java`
+
+---
+
+# Coding Exercise 28: Interactive Summation And Average Calculator From User Input
+
+## Problem Summary
+Write a method named `inputThenPrintSumAndAverage` that reads reads `int` number's from the keyboard. When the input is not an 
+`int`, print the message **SUM = XX AVG = YY**
+* **XX** = sum
+* **YY** = average
+
+### Parameters
+* none
+
+### Rules & Constraints
+* **Validation**: If the parameter is not a `int` or a number at all, quit out of the method.
+* **Average Data Type**: The data type for `average` must be of type `long`.
+* **Sum Data Type**: The data typ e for `sum` must be of type `int`.
+* **Early Invalid Input**: Users might exit early. Average and sum must both equal 0 in this instance.
+
+### Examples
+1. First Example:
+   * Input: 1, 2, 3, 4, 5, a
+   * Output: SUM = 15 AVG = 3
+
+2. Second Example
+   * Input: hello
+   * Output: SUM = 0 AVG = 0
+
+### Pseudocode (Instructions)
+BEGIN `inputThenPrintSumAndAverage`:
+1. SET `sum` to 0
+2. SET `avg` to 0
+3. SET `loopCount` to 0
+4.
+   * DO
+      * PROMPT user for a whole number and STORE in input
+      * IF input **IS** a whole number:
+        * ADD `input` to `sum`
+        * INCREMENT `loopCount` by 1
+   * WHILE input **IS** a whole number
+5. IF `loopCount` equals 0:
+   * PRINT `SUM = 0 AVG = 0`
+   * ELSE:
+     * SET `avg` to rounded up verison of `sum / loopCount`
+     * PRINT `"SUM = " + sum + "AVG = " + avg`
+
+### Solution File
+`CodingExercise28.java`
