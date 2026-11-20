@@ -1131,3 +1131,103 @@ BEGIN `getBucketCount`:
 
 ### Solution File
 `CodingExercise29.java`
+
+---
+
+# Coding Exercise 30: Sum Calculator Implementation
+
+## Problem Summary
+Create a class named `SimpleCalculator` that has two fields: **firstNumber** and **secondNumber** of type `double`. You need to be able 
+to set and get the value from these fields. as well as create methods to perfrom addition, multiplication, subtraction, and division on 
+them.
+
+### Parameters
+* **firstNumber**: the first number in which the program can perform multiple math operations on.
+* **secondNumber**: the second number in which the program can perform multiple math operations on.
+
+### Rules & Constraints
+* **Encapsulation**: Access to the fields should not be `public`. Must create Getters and Setters for fields.
+* **Field Data Type**: The operations must be performed on `double`s.
+* **Division Method Validation**: If **secondNumber** is 0 then the method must return 0 
+
+
+### Example
+```text
+SimpleCalculator calculator = new SimpleCalculator();
+calculator.setFirstNumber(5.0);
+calculator.setSecondNumber(4);
+System.out.println("add= " + calculator.getAdditionResult());
+System.out.println("subtract= " + calculator.getSubtractionResult());
+calculator.setFirstNumber(5.25);
+calculator.setSecondNumber(0);
+System.out.println("multiply= " + calculator.getMultiplicationResult());
+System.out.println("divide= " + calculator.getDivisionResult());
+```
+Expected output:
+````text
+add= 9.0
+subtract= 1.0
+multiply= 0.0
+divide= 0.0
+````
+
+
+### Pseudocode (Instructions)
+````text
+CLASS SimpleCalculator:
+  DECLARE PRIVATE firstNumber
+  DECLARE PRIVATE secondNumber
+
+  METHOD getAdditionResult()
+    RETURN THIS.firstNumber + THIS.secondNumber
+  END METHOD
+
+  METHOD getSubtractionResult()
+    RETURN THIS.firstNumber - THIS.secondNumber
+  END METHOD
+
+  METHOD getMultiplicationResult()
+    RETURN THIS.firstNumber * THIS.secondNumber
+  END METHOD
+
+  METHOD getDivisionResult()
+    IF THIS.secondNumber is 0
+      RETURN 0
+    END IF
+    RETURN THIS.firstNumber / THIS.secondNumber
+  END METHOD
+
+  METHOD getFirstNumber()
+    RETURN firstNumber
+  END METHOD
+
+  METHOD setFirstNumber(firstNumber)
+    SET THIS.firstNumber to firstNumber
+  END METHOD
+
+  METHOD getSecondNumber()
+    RETURN secondNumber
+  END METHOD
+
+  METHOD setSecondNumber(secondNumber)
+    SET THIS.secondNumber to secondNumber
+  END METHOD
+END SimpleCalculator
+
+BEGIN MAIN
+  CREATE new SimpleCalculator object as calculator
+
+  CALL calculator.setFirstNumber(5.0)
+  CALL calculator.setSecondNumber(4)
+  PRINT "add = " + CALL calculator.getAdditionResult()
+  PRINT "subtract = " + CALL calculator.getSubtractionResult()
+
+  CALL calculator.setFirstNumber(5.25)
+  CALL calculator.setSecondNumber(0)
+  PRINT "multiply = " + CALL getMultiplicationResult()
+  PRINT "divide = " + CALL getDivisionResult()
+END MAIN
+````
+
+### Solution File
+`CodingExercise30.java`
